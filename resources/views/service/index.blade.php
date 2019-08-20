@@ -1,11 +1,40 @@
+<style>
+    .title {
+        width: 100%;
+        padding: 0 40px;
+        margin: 40px 0;
+    }
+
+    .title .big {
+        font-size: 36px;
+        margin-bottom: 14px;
+        font-family: "Microsoft Sans Serif";
+        color: #333;
+    }
+
+    .title .small {
+        font-size: 18px;
+        color: #333;
+        margin-top: 14px;
+        font-family: "Microsoft Sans Serif";
+    }
+
+    .title hr {
+        background-color: black;
+        height: 1px; border: none;
+    }
+</style>
 @extends('layout/layout')
 @section('content')
     <div class="full-main-container white-bg full-main-container-margin">
-        <div>
-            服务能力
-        </div>
-        <div>
-            基于理解、连接和帮助他人的驱动力，以及深入倾听、参与和探索不同视角和经验的能力。
+        <div class="title">
+            <div class="big">
+                服务能力
+            </div>
+            <hr>
+            <div class="small">
+                基于理解、连接和帮助他人的驱动力，以及深入倾听、参与和探索不同视角和经验的能力。
+            </div>
         </div>
         <div class=" remove-top-padding wrap-content">
             <a class="down-cta">
@@ -15,41 +44,45 @@
             </a>
 
             <div class="row front-page-section image-text-section" >
-                <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
-                    <div class="content-textbox " style="color: #ffffff; text-align: center">
-                        <h1>CIS 案例导入</h1>
-                        <br/>
-                        <p>
-                            在多年的业务实践中，尚清美参与了近百个各种类型的CI与品牌规划作业，积累了丰富的作业经验。
-                            视觉识别也好，形象设计也好，我们认为CI首先是一种规划，是建立在企业理念和未来发展规划上的形象构想。规划的初衷，是建立科学化的视觉传达体系；终极的目标，是实现客户与社会的良性沟通。
-                        </p>
+                <a href="{{ route('web.service.show', ['id' => 1]) }}">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
+                        <div class="content-textbox " style="color: #ffffff; text-align: center">
+                            <h1>作业八法</h1>
+                            <br/>
+                            <p>
+                                独具特色的尚清美八法
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="row front-page-section image-text-section" >
-                <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
-                    <div class="content-textbox " style="color: #ffffff; text-align: center">
-                        <h1>品牌案例设计</h1>
-                        <br/>
-                        <p>
-                            越来越多的企业意识到品牌的重要性，开始创造属于自己的图腾文化。
-                            从本质上说，品牌是在传递一种信息。品牌不单单是一种名称、标记、符号或设计，或它们的组合运用，更重要的是品牌所传递的价值、文化和个性，它们确定了品牌的基础。 我们的作业核心是发现价值，然后权衡和重组品牌规划
-                        </p>
+                <a href="{{ route('web.service.show', ['id' => 3]) }}">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
+                        <div class="content-textbox " style="color: #ffffff; text-align: center">
+                            <h1>整体作业方案</h1>
+                            <br/>
+                            <p>
+                                提供品牌建设的整体解决方案
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="row front-page-section image-text-section" >
-                <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
-                    <div class="content-textbox " style="color: #ffffff; text-align: center">
-                        <h1>环境规划</h1>
-                        <br/>
-                        <p>
-                            环境给予人的影响是那么直接而强烈，在环境识别设计、专卖店设计、主题环境方面，我们将品牌意识融入立体的形式与空间，形成品牌体验，建立个性鲜活的品牌传播力。
-                        </p>
+                <a href="{{ route('web.service.show', ['id' => 2]) }}">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
+                        <div class="content-textbox " style="color: #ffffff; text-align: center">
+                            <h1>业务流程</h1>
+                            <br/>
+                            <p>
+                                品牌规划的全程策略伙伴
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

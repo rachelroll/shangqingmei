@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/Controllers/CategoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/routes.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/AboutController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/StoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Project.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/ProjectCategory.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/composer.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/admin.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/filesystems.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_08_16_055450_create_projects_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_08_19_064534_create_project_categories_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/deploy.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/about/about.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/footer.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/project/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/project/list.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/project/show.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/service/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/service/show1.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/service/show2.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/service/show3.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/story/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/routes/web.php" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
