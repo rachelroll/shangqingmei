@@ -16,4 +16,6 @@ Route::group([
 
     $router->resource('categories', CategoryController::class);
 
+    $router->resource('stories', StoryController::class);
+
 });

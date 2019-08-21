@@ -33,7 +33,7 @@ set('writable_dirs', ['bootstrap/cache']);
 //    ->stage('staging');
 
 // hongkong
-host('47.89.32.117')
+host('www.yixiangjian.com')
     ->user('deployer')
     ->set('writable_use_sudo', true)
     ->set('deploy_path', '/var/www/{{application}}')

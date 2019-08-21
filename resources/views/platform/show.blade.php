@@ -61,12 +61,12 @@
             <div class="text-image-row">
                 <div class="single-image">
                     @foreach($lists as $list)
-                    <h1>{{ $list->title }}</h1>
-                    <ul>
-                        @foreach($list->projects as $item)
-                        <li>- {{ $item->title }}</li>
+                        <h1>{{ $list->title }}</h1>
+                        <ul>
+                            @foreach($list->projects as $item)
+                                <li>- {{ $item->title }}</li>
                             @endforeach
-                    </ul>
+                        </ul>
                     @endforeach
                 </div>
                 <div class="image-text">
@@ -89,11 +89,11 @@
                     </div>
                     <div class="images-group">
                         @foreach($project->images as $image)
-                        <div class="images-row">
-                            <div class="col">
-                                <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
+                            <div class="images-row">
+                                <div class="col">
+                                    <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>

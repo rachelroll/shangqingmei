@@ -29,71 +29,58 @@
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
             <div class="related-content-row" style="padding-top: 36px">
-                <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
+                <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">整体作业方案</div>
-                        <h2 class="item-title">提供品牌建设的整体解决方案</h2>
+                        <h2 class="item-title">VI/CI 设计</h2>
                         <div class="item-subtitle">
                         </div>
                     </div>
                 </a>
-
-                <a href="{{ route('web.service.show', ['id' => 3]) }}" class="search-result-item">
+                <a href="{{ route('web.story.list', ['id' => 1]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">业务流程</div>
-                        <h2 class="item-title">提供品牌建设的整体解决方案</h2>
+                        <h2 class="item-title">行业经验</h2>
                         <div class="item-subtitle">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="images-group">
-                <div class="images-row">
-                    <div class="col"  style="margin-top: 30px;">
-                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $project->cover }}">
-                    </div>
-                </div>
-            </div>
             <div class="text-image-row">
                 <div class="single-image">
-                    @foreach($lists as $list)
-                    <h1>{{ $list->title }}</h1>
-                    <ul>
-                        @foreach($list->projects as $item)
-                        <li>- {{ $item->title }}</li>
+                    @foreach($nav as $key => $list)
+                        <h1>{{ $key }}</h1>
+                        <ul>
+                            @foreach($list as $item)
+                                <li>- {{ $item }}</li>
                             @endforeach
-                    </ul>
+                        </ul>
                     @endforeach
                 </div>
                 <div class="image-text">
                     <div class="text-body">
-                        <p style="margin-bottom: 20px; font-weight: bold">
-                            {{ $project->title }}
+                        <p>
+                            客户: {{ $story->client_name }}
                         </p>
                         <p>
-                            客户: {{ $project->client }}
+                            类型: {{ $story->type_name }}
                         </p>
                         <p>
-                            类型: {{ $project->type }}
+                            内容: {{ $story->content }}
                         </p>
                         <p>
-                            内容: {{ $project->content }}
-                        </p>
-                        <p>
-                            时间: {{ $project->date }}
+                            时间: {{ $story->date }}
                         </p>
                     </div>
                     <div class="images-group">
-                        @foreach($project->images as $image)
-                        <div class="images-row">
-                            <div class="col">
-                                <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
+                        @foreach($story->images as $image)
+                            <div class="images-row">
+                                <div class="col">
+                                    <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>

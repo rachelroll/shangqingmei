@@ -29,11 +29,11 @@
     <div class="full-main-container white-bg full-main-container-margin">
         <div class="title">
             <div class="big">
-                作业故事
+                互动平台
             </div>
             <hr>
             <div class="small">
-                我们的服务覆盖多个领域，这使我们得以扩充我们的业务量级，素质和专业知识使我们拥有了技术优势。
+                这是我们为客户推出的一项免费服务，如果您对目前的品牌建设有不满意之处，意欲寻找解决办法，我们愿从专业角度为您做一次初步诊断和改进建议。
             </div>
         </div>
         <div class=" remove-top-padding wrap-content">
@@ -44,13 +44,12 @@
             </a>
 
             <div class="row front-page-section image-text-section" >
-                <a href="{{ route('web.story.list', ['id' => 2]) }}">
+                <a href="{{ route('web.project.list', ['id' => 1]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: A</h1>
                             <br/>
                             <p>
-                                CI 故事
+                                在线咨询 & 留言
                             </p>
                         </div>
                     </div>
@@ -58,13 +57,25 @@
             </div>
 
             <div class="row front-page-section image-text-section" >
-                <a href="{{ route('web.story.list', ['id' => 1]) }}">
+                <a href="{{ route('web.project.list', ['id' => 2]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: B</h1>
                             <br/>
                             <p>
-                                行业经验
+                                视野观点
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="row front-page-section image-text-section" >
+                <a href="{{ route('web.project.list', ['id' => 3]) }}">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
+                        <div class="content-textbox " style="color: #ffffff; text-align: center">
+                            <br/>
+                            <p>
+                                形象传奇
                             </p>
                         </div>
                     </div>
