@@ -1,0 +1,24 @@
+.img-block img {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.wrap-iconic-case .text-image-row div.single-image {
+    background-color: #ddd;
+    padding: 32px;
+    margin-right: 30px;
+}
+
+.wrap-iconic-case .text-image-row div.single-image h1 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.wrap-iconic-case .text-image-row div.single-image ul li {
+    margin: 10px 0;
+    color: #666;
+}
+
+body.lang-undefined {
+    line-height: 1.5;
+}

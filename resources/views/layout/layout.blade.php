@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="../wp-content/themes/interbrand/vendor/reset-css/reset.css">
     <link type="text/css" rel="stylesheet" href="../wp-content/themes/interbrand/vendor/owl.carousel/dist/assets/owl.carousel.min.css">
     <link type="text/css" rel="stylesheet" href="../wp-content/themes/interbrand/vendor/owl.carousel/dist/assets/owl.theme.default.min.css">
-
+    <link rel="stylesheet" href="/css/customize.css">
     <!-- This site is optimized with the Yoast SEO plugin v5.9.3 - https://yoast.com/wordpress/plugins/seo/ -->
     <link rel="canonical" href="index.html" />
     <link rel="publisher" href="https://plus.google.com/+interbrand/about"/>

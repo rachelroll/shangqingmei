@@ -45,6 +45,16 @@ Route::get('/story/{id}', 'StoryController@show')->name('web.story.show');
 Route::get('/platform', 'PlatformController@index')->name('web.platform.index');
 // 品牌问题咨询
 Route::get('/platform/brand-consult', 'PlatformController@brandConsult')->name('web.platform.brand-consult');
+// 视觉形象诊所
+Route::get('/platform/visual-clinic', 'PlatformController@visualClinic')->name('web.platform.visual-clinic');
+// CI 理念的厘清
+Route::get('/platform/linian', 'PlatformController@linian')->name('web.platform.linian');
+// 形象过渡案例
+Route::get('/platform/transform-case', 'PlatformController@transformCase')->name('web.platform.transform-case');
+// 形象更新案例
+Route::get('/platform/update-case', 'PlatformController@updateCase')->name('web.platform.update-case');
+// 品牌问题咨询存储
+Route::post('/platform/brand-consult', 'PlatformController@consultStore')->name('web.platform.consult-store');
 // 互动平台详情页
 Route::get('/platform/{id}', 'PlatformController@show')->name('web.platform.show');
 
