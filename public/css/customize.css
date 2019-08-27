@@ -22,3 +22,7 @@
 body.lang-undefined {
     line-height: 1.5;
 }
+
+.ip-info {
+    float: right;
+}

@@ -58,6 +58,8 @@ Route::post('/platform/brand-consult', 'PlatformController@consultStore')->name(
 // 互动平台详情页
 Route::get('/platform/{id}', 'PlatformController@show')->name('web.platform.show');
 
+// 留言存储
+Route::post('/message', 'MessageController@store')->name('web.message.store');
 
 
 

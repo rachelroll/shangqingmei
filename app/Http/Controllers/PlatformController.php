@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Illuminate\Http\Request;
 
 class PlatformController extends Controller
@@ -15,7 +16,8 @@ class PlatformController extends Controller
     // 品牌问题咨询
     public function brandConsult()
     {
-        return view('platform.brand_consult');
+        $messages = Message::all();
+        return view('platform.brand_consult', compact('messages'));
     }
 
     // 品牌问题存储
