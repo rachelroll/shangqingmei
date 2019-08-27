@@ -51,13 +51,13 @@
                     </div>
                 </a>
             </div>
-            <div class="images-group">
-                <div class="images-row">
-                    <div class="col"  style="margin-top: 30px;">
-                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $project->cover }}">
-                    </div>
-                </div>
-            </div>
+{{--            <div class="images-group">--}}
+{{--                <div class="images-row">--}}
+{{--                    <div class="col"  style="margin-top: 30px;">--}}
+{{--                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $project->cover }}">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="text-image-row">
                 <div class="single-image">
                     @foreach($lists as $list)

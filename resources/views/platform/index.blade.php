@@ -44,7 +44,7 @@
             </a>
 
             <div class="row front-page-section image-text-section" >
-                <a href="{{ route('web.project.list', ['id' => 1]) }}">
+                <a href="{{ route('web.platform.brand-consult') }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="row front-page-section image-text-section" >
-                <a href="{{ route('web.project.list', ['id' => 2]) }}">
+                <a href="{{ route('web.platform.opinion') }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>

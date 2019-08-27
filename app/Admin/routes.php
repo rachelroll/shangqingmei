@@ -18,4 +18,7 @@ Route::group([
 
     $router->resource('stories', StoryController::class);
 
+    // 视野观点
+    $router->resource('opinions', OpinionController::class);
+
 });

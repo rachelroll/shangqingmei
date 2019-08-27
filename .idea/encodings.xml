@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/../changtian-api/deploy.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/CategoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/Controllers/OpinionController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/StoryController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/routes.php" charset="UTF-8" />
@@ -14,7 +15,9 @@
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/StoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Kernel.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Message.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Platform.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Project.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/ProjectCategory.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Story.php" charset="UTF-8" />
@@ -25,19 +28,25 @@
     <file url="file://$PROJECT_DIR$/config/geoip.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_16_055450_create_projects_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_16_055507_create_stories_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_08_16_055518_create_platforms_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_19_064534_create_project_categories_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_21_095542_create_brand_consults_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_26_031930_create_messages_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_08_27_081024_create_opinions_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deploy.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/css/customize.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/about/about.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layout/flash_session.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/footer.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/brand_consult.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/linian.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/platform/message.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/platform/nav.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/platform/opinion.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/show.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/transform_case.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/update_case.blade.php" charset="UTF-8" />

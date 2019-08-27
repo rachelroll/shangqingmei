@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Platform extends Model
+class Opinion extends Model
 {
-
-    protected $guarded = [];
+    //
 }

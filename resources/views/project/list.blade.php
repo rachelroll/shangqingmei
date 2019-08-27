@@ -23,19 +23,41 @@
 @extends('layout/layout')
 @section('content')
     <div class="main-container white-bg main-container-margin">
-        <div class="row hero-row image-row">
-            <div class="hero-container image-container" style="background-image: url( '../../wp-content/uploads/2016/09/mini-hero.jpg' );">
-                <div class="overlay-hero">
-                    <div class="overlay-hero-title ">
-                        <h3 class="text-medium">作业八法</h3>
-                        <h1 class="text-huge ">独具特色的尚清美八法</h1>
+        <div class="wrap-iconic-case">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/img/project-list1.jpg" style="width: 120%" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color: #666">第一张轮播图</h5>
+                                <p style="color: #666">可以写些文字</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/project-list2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>第二张轮播图</h5>
+                                <p>可以写些文字</p>
+                            </div>
+                        </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-        </div>
 
         <div class="wrap-iconic-case">
-            <div class="related-content-row">
+            <div class="related-content-row" style="padding-top: 10px">
                 <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">

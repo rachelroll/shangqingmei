@@ -53,10 +53,16 @@ Route::get('/platform/linian', 'PlatformController@linian')->name('web.platform.
 Route::get('/platform/transform-case', 'PlatformController@transformCase')->name('web.platform.transform-case');
 // 形象更新案例
 Route::get('/platform/update-case', 'PlatformController@updateCase')->name('web.platform.update-case');
-// 品牌问题咨询存储
+// 品牌问题咨询表单提交
 Route::post('/platform/brand-consult', 'PlatformController@consultStore')->name('web.platform.consult-store');
+// 视觉形象诊断表单提交
+Route::post('/platform/visual-clinic', 'PlatformController@VisualClinicStore')->name('web.platform.visual-clinic-store');
+// 视野观点
+Route::get('/platform/opinion', 'PlatformController@opinion')->name('web.platform.opinion');
 // 互动平台详情页
 Route::get('/platform/{id}', 'PlatformController@show')->name('web.platform.show');
+
+
 
 // 留言存储
 Route::post('/message', 'MessageController@store')->name('web.message.store');

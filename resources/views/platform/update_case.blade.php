@@ -1,8 +1,9 @@
 @extends('layout/layout')
 @section('content')
+    @include('layout/flash_session')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
-            <div class="related-content-row" style="padding-top: 36px">
+            <div class="related-content-row">
                 <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
@@ -23,21 +24,10 @@
                     </div>
                 </a>
             </div>
-            <h1>在线咨询</h1>
+            <br>
+            <h1 class="zaixianzixun">在线咨询</h1>
             <div class="text-image-row">
-                <div class="single-image">
-                    <h1>互动平台</h1>
-                    <ul>
-                        <li>- 品牌问题咨询</li>
-                        <li>- 视觉形象诊断</li>
-                    </ul>
-                    <h1>诊断案例</h1>
-                    <ul>
-                        <li>- CI 理念的厘清</li>
-                        <li>- 形象过渡案例</li>
-                        <li style="color:red">- 形象更新案例</li>
-                    </ul>
-                </div>
+                @include('platform/nav')
                 <div class="image-text">
                     <h1 style="font-size: 22px">DYNIC的失利和NTT的成功</h1>
                     <hr>
@@ -92,6 +82,7 @@
                     <p>资源来源：《新CI战略》台湾艺风堂出版社1988年出版</p>
                 </div>
             </div>
+            @include('platform/message')
         </div>
     </div>
 @endsection

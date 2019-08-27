@@ -1,32 +1,9 @@
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style>
-    .wrap-iconic-case .text-image-row div.single-image {
-        background-color: #ddd;
-        padding: 32px;
-        margin-right: 30px;
-    }
-
-    .wrap-iconic-case .text-image-row div.single-image h1 {
-        font-size: 18px;
-        margin-bottom: 16px;
-    }
-
-    .wrap-iconic-case .text-image-row div.single-image ul li {
-        margin: 10px 0;
-        color: #666;
-    }
-
-    body.lang-undefined {
-        line-height: 1.5;
-    }
-</style>
-
 @extends('layout/layout')
 @section('content')
+    @include('layout/flash_session')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
-            <div class="related-content-row" style="padding-top: 36px">
+            <div class="related-content-row">
                 <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
@@ -47,21 +24,10 @@
                     </div>
                 </a>
             </div>
+            <br>
+            <h1 class="zaixianzixun">在线咨询</h1>
             <div class="text-image-row">
-                <div class="single-image">
-                    <h1>互动平台</h1>
-                    <ul>
-                        <li>- 品牌问题咨询</li>
-                        <li style="color:red">- 视觉形象诊断</li>
-                    </ul>
-                    <h1>诊断案例</h1>
-                    <ul>
-                        <li>- CI 理念的厘清</li>
-                        <li>- 形象过度案例</li>
-                        <li>- 形象更新案例</li>
-                        <li>- 尚清美诊断案例</li>
-                    </ul>
-                </div>
+                @include('platform/nav')
                 <div class="image-text">
                     <h1 style="font-size: 22px">视觉形象诊断</h1>
                     <br>
@@ -75,65 +41,66 @@
                     <br>
                     <h1 style="font-size: 22px">VI 诊断基本信息采集表</h1>
                     <br>
-                    <form method="post" action="{{ route('web.platform.consult-store') }}">
+                    <form method="post" action="{{ route('web.platform.visual-clinic-store') }}">
+                        @csrf
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">企业名称: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="company" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">主导产业: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="industry" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">企业理念: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="linian" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">品牌名称与组合: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="brands" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">品牌主张: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="opinion" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">标志应用范围: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="range" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">标志在社会上的认知度: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="famous" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-3 col-form-label">您对该标志的看法: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3">
+                                <input type="text" name="comments" class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-sm-3 col-form-label">您的姓名: </label>
                             <div class="col-sm-9">
-                                <input type="password" name="name" class="form-control" id="name" placeholder="填写姓名">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="填写姓名">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="company" class="col-sm-3 col-form-label">所在单位: </label>
+                            <label for="from_company" class="col-sm-3 col-form-label">所在单位: </label>
                             <div class="col-sm-9">
-                                <input type="password" name="company" class="form-control" id="company" placeholder="填写单位">
+                                <input type="text" name="from_company" class="form-control" id="from_company" placeholder="填写单位">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -150,6 +117,7 @@
                     </form>
                 </div>
             </div>
+            @include('platform/message')
         </div>
     </div>
 @endsection
