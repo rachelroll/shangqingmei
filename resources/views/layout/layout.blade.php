@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="../wp-content/themes/interbrand/vendor/owl.carousel/dist/assets/owl.carousel.min.css">
     <link type="text/css" rel="stylesheet" href="../wp-content/themes/interbrand/vendor/owl.carousel/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/customize.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- This site is optimized with the Yoast SEO plugin v5.9.3 - https://yoast.com/wordpress/plugins/seo/ -->
     <link rel="canonical" href="index.html" />
     <link rel="publisher" href="https://plus.google.com/+interbrand/about"/>
@@ -66,7 +66,8 @@
 
     <!-- injector:css -->
     <!-- endinjector -->
-    <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <style> #mainNav.show .nav-toggle .hamburger .line2, #mainNav.show .nav-toggle .hamburger .line3 { margin-left: 3px; margin-top: -7px; } </style> <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <style> #mainNav.show .nav-toggle .hamburger .line2, #mainNav.show .nav-toggle .hamburger .line3 { margin-left: 3px; margin-top: -7px; } </style> <![endif]-->
     <link href="../wp-content/themes/interbrand/img/favicon.ico" rel="shortcut icon"/>
     <style>/* Brute force correct wordpress admin bar */
         html {

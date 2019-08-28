@@ -1,5 +1,13 @@
-@extends('layout/layout')
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    .wrap-iconic-case .text-image-row div.single-image {
+        background-color: #ddd;
+        padding: 32px;
+        margin-right: 30px;
+    }
+</style>
 
+@extends('layout/layout')
 @section('content')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">

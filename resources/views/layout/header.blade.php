@@ -29,7 +29,7 @@
                         服务能力
                     </a>
                     <a href="{{route('web.project.index')}}" class="text-block text-medium hover-red">
-                        作业案例
+                        服务案例
                     </a>
                     <a href="{{route('web.stroy.index')}}" class="text-block text-medium hover-red">
                         作业故事

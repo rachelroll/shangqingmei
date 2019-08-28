@@ -70,7 +70,7 @@
             </div>
 
             <div class="row front-page-section image-text-section" >
-                <a href="{{ route('web.project.list', ['id' => 3]) }}">
+                <a href="{{ route('web.platform.chuanqi', ['id' => 1]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>

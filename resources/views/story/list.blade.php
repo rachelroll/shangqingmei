@@ -38,7 +38,7 @@
 @section('content')
     <div class="full-main-container white-bg full-main-container-margin">
         <div class="wrap-iconic-case">
-            <div class="related-content-row" style="padding-top: 36px">
+            <div class="related-content-row" style="">
                 <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
@@ -61,31 +61,26 @@
             </div>
         </div>
 
-        <section id="mainBody" class="about">
-            <div class="wrap-approach wrap-content">
-                <div class="row two-columns-list">
-                    <div class="col-100 text-huge base-margin-bottom">
-                        @if(request()->fullUrl() == route('web.story.list', ['type' => 1]))
-                            <h2>行业经验</h2>
-                        @else
-                            <h2>CI 故事</h2>
-                        @endif
-                    </div>
-                    <div class="row is-flex base-margin-bottom">
-                        @foreach($lists as $list)
-                            <div class="col-25 block" style="padding: 0">
-                                <a href="{{ route('web.story.show', ['id' => $list->id]) }}" style="display: block">
-                                    <p class="big-font">{{ $list->client_name }}</p>
-                                    <p class="small-font">{{ $list->sub_category }}</p>
-                                    <div class="mask" style="display: none">
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
-                    </div>
+        <div class="wrap-iconic-case">
+            <div class="related-content-row" style="padding-top: 36px; justify-content: left">
+                <div class="col-100 text-huge base-margin-bottom">
+                    @if(request()->fullUrl() == route('web.story.list', ['type' => 1]))
+                        <h2>行业经验</h2>
+                    @else
+                        <h2>CI 故事</h2>
+                    @endif
                 </div>
+                @foreach($lists as $list)
+                    <div class="col-25 block" style="padding: 0" id="{{ $list->id }}">
+                        <p class="big-font">{{ $list->client_name }}</p>
+                        <p class="small-font">{{ $list->sub_category }}</p>
+                        <div class="mask" style="display: none"></div>
+                    </div>
+                @endforeach
             </div>
-        </section>
+        </div>
+        <br>
+        <br>
     </div>
 @endsection
 
@@ -103,6 +98,11 @@
             $(this).children("p.big-font").css('font-size', '30px');
             $(this).children("p.small-font").css('font-size', '18px');
         });
+
+        $(".col-25").click(function () {
+            var id = $(this).attr('id');
+            window.location.href="../story/" + id;
+        })
     });
 </script>
 

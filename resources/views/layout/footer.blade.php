@@ -25,7 +25,7 @@
                     </a>
 
                     <a href="../about/index.html" class="hover-red">
-                        作业案例
+                        服务案例
                     </a>
 
                     <a href="index.html" class="hover-red">
