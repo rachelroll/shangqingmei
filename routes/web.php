@@ -59,9 +59,10 @@ Route::post('/platform/brand-consult', 'PlatformController@consultStore')->name(
 Route::post('/platform/visual-clinic', 'PlatformController@VisualClinicStore')->name('web.platform.visual-clinic-store');
 // 视野观点
 Route::get('/platform/opinion', 'PlatformController@opinion')->name('web.platform.opinion');
+// 形象传奇
+Route::get('/platform-chuanqi/{id}', 'PlatformController@Chuanqi')->name('web.platform.chuanqi');
 // 互动平台详情页
 Route::get('/platform/{id}', 'PlatformController@show')->name('web.platform.show');
-
 
 
 // 留言存储

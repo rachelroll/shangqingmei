@@ -4,9 +4,12 @@
     <file url="file://$PROJECT_DIR$/../changtian-api/deploy.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/CategoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/Controllers/ChuanqiController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/OpinionController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/ProjectController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/Controllers/StoryController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/Extensions/Simditor.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Admin/bootstrap.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Admin/routes.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/BrandConsult.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/AboutController.php" charset="UTF-8" />
@@ -33,15 +36,18 @@
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_21_095542_create_brand_consults_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_26_031930_create_messages_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_08_27_081024_create_opinions_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_08_27_085452_create_chuanqis_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deploy.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/css/customize.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/about/about.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/admin/simditor.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/flash_session.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/footer.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/brand_consult.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/platform/chuanqi.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/linian.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/platform/message.blade.php" charset="UTF-8" />

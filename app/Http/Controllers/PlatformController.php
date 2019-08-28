@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BrandConsult;
+use App\Chuanqi;
 use App\Message;
 use App\Opinion;
 use App\Platform;
@@ -114,6 +115,13 @@ class PlatformController extends Controller
         return view('platform.opinion', compact('messages', 'ci_files', 'brand_files', 'sales_files'));
     }
 
+    public function chuanqi($id)
+    {
+        $chuanqi = Chuanqi::find($id);
 
+        $lists = Chuanqi::get()->groupBy('type');
 
+        $messages = Message::orderby('id', 'DESC')->get();
+        return view('platform.chuanqi', compact('chuanqi', 'lists', 'messages'));
+    }
 }

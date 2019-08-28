@@ -21,4 +21,7 @@ Route::group([
     // 视野观点
     $router->resource('opinions', OpinionController::class);
 
+    // 形象传奇
+    $router->resource('chuanqis', ChuanqiController::class);
+
 });

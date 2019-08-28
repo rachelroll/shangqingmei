@@ -4,7 +4,7 @@
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
             <div class="related-content-row">
-                <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
+                <a href="{{ route('web.platform.brand-consult') }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
