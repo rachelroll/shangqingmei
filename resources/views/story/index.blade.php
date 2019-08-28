@@ -47,11 +47,11 @@
                 <a href="{{ route('web.story.list', ['id' => 2]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: A</h1>
+                            <p>CASE: A</p>
                             <br/>
-                            <p>
+                            <h1>
                                 CI 故事
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
@@ -61,11 +61,11 @@
                 <a href="{{ route('web.story.list', ['id' => 1]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: B</h1>
+                            <p>CASE: B</p>
                             <br/>
-                            <p>
+                            <h1>
                                 行业经验
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>

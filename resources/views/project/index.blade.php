@@ -26,7 +26,7 @@
 </style>
 @extends('layout/layout')
 @section('content')
-    <div class="full-main-container white-bg full-main-container-margin">
+    <div class="menu-container">
         <div class="title">
             <div class="big">
                 服务案例
@@ -36,6 +36,8 @@
                 成就客户的品牌才能铸就成功案例, 只有成功案例才能证明我们的价值
             </div>
         </div>
+    </div>
+    <div class="full-main-container white-bg full-main-container-margin">
         <div class=" remove-top-padding wrap-content">
             <a class="down-cta">
                 <img class="arrow main-arrow" src="../wp-content/themes/interbrand/img/m-arr1.svg" />
@@ -47,11 +49,11 @@
                 <a href="{{ route('web.project.list', ['id' => 1]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: A</h1>
+                            <p>CASE: A</p>
                             <br/>
-                            <p>
+                            <h1>
                                 CIS 导入案例
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
@@ -61,11 +63,11 @@
                 <a href="{{ route('web.project.list', ['id' => 2]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: B</h1>
+                            <p>CASE: B</p>
                             <br/>
-                            <p>
+                            <h1>
                                 品牌设计案例
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
@@ -75,11 +77,11 @@
                 <a href="{{ route('web.project.list', ['id' => 3]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
-                            <h1>CASE: C</h1>
+                            <p>CASE: C</p>
                             <br/>
-                            <p>
+                            <h1>
                                 环境规划案例
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
