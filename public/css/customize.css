@@ -3,11 +3,6 @@
     margin-right: 30px;
 }
 
-.wrap-iconic-case .text-image-row div.single-image h1 {
-    font-size: 18px;
-    margin-bottom: 16px;
-}
-
 .wrap-iconic-case .text-image-row div.single-image ul li {
     margin: 10px 0;
     color: #666;
@@ -34,7 +29,7 @@ body.lang-undefined {
 }
 
 .wrap-iconic-case .text-image-row div.single-image h1 {
-    font-size: 18px;
+    font-size: 26px;
     margin-bottom: 16px;
 }
 

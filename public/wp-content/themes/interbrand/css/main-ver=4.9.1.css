@@ -4630,7 +4630,7 @@ textarea.ninja-forms-field {
       color: #999999;
       line-height: 1.5; }
     .main-footer.m-footer a {
-      margin-right: 40px; }
+      margin-right: 80px; }
       @media (min-width: 768px) and (max-width: 992px) {
         .main-footer.m-footer a {
           width: 25%;
@@ -7340,7 +7340,7 @@ input[type="search"]::-webkit-search-cancel-button {
       color: #999999;
       line-height: 1.5; }
     .main-footer.m-footer a {
-      margin-right: 40px; }
+      margin-right: 60px; }
       @media (min-width: 768px) and (max-width: 992px) {
         .main-footer.m-footer a {
           width: 25%;
@@ -8097,8 +8097,8 @@ input[type="search"]::-webkit-search-cancel-button {
         display: block;
         background-color: #FFFFFF; }
     .wrap-iconic-case .text-image-row .image-text {
-      -ms-flex: 3 2;
-          flex: 3 2;
+      -ms-flex: 4 2;
+          flex: 4 2;
       padding: 0 0 0 20px; }
       @media (max-width: 768px) {
         .wrap-iconic-case .text-image-row .image-text {

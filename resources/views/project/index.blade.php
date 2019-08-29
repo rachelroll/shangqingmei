@@ -26,7 +26,7 @@
 </style>
 @extends('layout/layout')
 @section('content')
-    <div class="menu-container">
+    <div class="main-container">
         <div class="title">
             <div class="big">
                 服务案例

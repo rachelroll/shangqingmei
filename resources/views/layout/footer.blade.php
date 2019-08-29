@@ -8,7 +8,7 @@
 <br/>
 <footer id="" class="main-footer m-footer">
     <div class="main-container">
-        <div style="display: flex; justify-content:space-between;">
+        <div>
             <div>
                 <div class="is-start col-100">
                     <span class="main-follow-title">网页</span>
@@ -36,25 +36,29 @@
                         互动平台
                     </a>
                 </div>
-                <div class="is-start col-100">
-                    <span class="main-follow-title">联系我们</span>
-                    <a href="" class="hover-red">
-                        地址: 北京市海淀区大觉寺路 7 号 (100095)
-                    </a>
-                    <a href="" class="hover-red">
-                        电话: 183-0157-3107
-                    </a>
-                    <a href="" class="hover-red">
-                        固话: 010-80881930
-                    </a>
-                    <a href="https://www.instagram.com/interbrand/" class="hover-red">
-                        网址: www.star2001.com
-                    </a>
+                <div class="is-start col-100" style="display: flex; justify-content:space-between;">
+                    <div>
+                        <span class="main-follow-title">联系我们</span>
+                        <a href="" class="hover-red">
+                            地址: 北京市海淀区大觉寺路 7 号 (100095)
+                        </a>
+                        <a href="" class="hover-red">
+                            电话: 183-0157-3107
+                        </a>
+                        <a href="" class="hover-red">
+                            固话: 010-80881930
+                        </a>
+                        <a href="https://www.instagram.com/interbrand/" class="hover-red">
+                            网址: www.star2001.com
+                        </a>
+                    </div>
+
+                    <div style="margin: 24px 24px 0 0;">
+                        <img src="/img/foot-logo.png" alt="" style="width: 140px;"/>
+                    </div>
                 </div>
             </div>
-            <div style="margin-top: 62px">
-                <img src="/img/foot-logo.png" alt="" style="width: 140px;"/>
-            </div>
+
         </div>
         <div style="clear:both;"></div>
         <div class="col-100 center copyright-year text-tiny">

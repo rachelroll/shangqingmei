@@ -44,6 +44,8 @@
                 </div>
             </div>
 
+        <br>
+        <br>
         <div class="wrap-iconic-case">
             @if(request()->fullUrl() == route('web.project.list', ['id' => 3]))
                 <div class="related-content-row" style="padding-top: 10px">
@@ -115,37 +117,43 @@
                     </a>
                 </div>
             @endif
+                <br>
+                <br>
             <div class="text-image-row">
-                <div class="single-image">
+                <div class="single-image" style="position: relative">
                     @foreach($lists as $list)
-                        <h1>{{ $list->title }}</h1>
-                        <ul>
+                        <div style="border-left: 4px solid red; padding-left: 30px; position: absolute; left: -1px; height: 32px">
+                            <h1>{{ $list->title }}</h1>
+                        </div>
+                        <div style="clear: both"></div>
+                        <ul style="margin-top: 46px; margin-bottom: 10px">
                             @foreach($list->projects as $item)
                                 <li>- {{ $item->title }}</li>
                                 @endforeach
                         </ul>
                     @endforeach
                 </div>
-                @foreach($lists as $list)
-                    @foreach($list->projects as $item)
-                        <div class="image-text">
-                            <div class="text-body">
-                                <p style="margin-bottom: 20px">
-                                    {{ $item->title }}
-                                </p>
-                            </div>
-                            <a href="{{ route('web.project.show', ['id' => $item->id]) }}">
-                                <div class="images-group">
-                                    <div class="images-row">
-                                        <div class="col">
-                                            <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $item->cover }}">
-                                        </div>
+
+                <div class="image-text">
+                    @foreach($lists as $list)
+                        @foreach($list->projects as $item)<div class="text-body">
+                            <h1 style="margin: 20px 0">
+                                {{ $item->title }}
+                            </h1>
+                        </div>
+                        <a href="{{ route('web.project.show', ['id' => $item->id]) }}">
+                            <div class="images-group" style="margin-bottom: 60px">
+                                <div class="images-row">
+                                    <div class="col">
+                                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $item->cover }}">
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
+                        @endforeach
                     @endforeach
-                @endforeach
+                </div>
+                <br>
             </div>
         </div>
     </div>
