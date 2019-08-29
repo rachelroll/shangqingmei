@@ -120,13 +120,12 @@
                 <br>
                 <br>
             <div class="text-image-row">
-                <div class="single-image" style="position: relative">
+                <div class="single-image">
                     @foreach($lists as $list)
-                        <div style="border-left: 4px solid red; padding-left: 30px; position: absolute; left: -1px; height: 32px">
+                        <div class="red-border-box">
                             <h1>{{ $list->title }}</h1>
                         </div>
-                        <div style="clear: both"></div>
-                        <ul style="margin-top: 46px; margin-bottom: 10px">
+                        <ul>
                             @foreach($list->projects as $item)
                                 <li>- {{ $item->title }}</li>
                                 @endforeach

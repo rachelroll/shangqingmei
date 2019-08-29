@@ -28,7 +28,7 @@
 @section('content')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
-            <div class="related-content-row" style="padding-top: 36px">
+            <div class="related-content-row">
                 <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
                          class="responsive">
@@ -48,10 +48,14 @@
                     </div>
                 </a>
             </div>
+            <br>
+            <br>
             <div class="text-image-row">
                 <div class="single-image">
                     @foreach($nav as $key => $list)
-                        <h1>{{ $key }}</h1>
+                        <div class="red-border-box">
+                            <h1>{{ $key }}</h1>
+                        </div>
                         <ul>
                             @foreach($list as $item)
                                 <li>- {{ $item }}</li>

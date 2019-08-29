@@ -48,9 +48,9 @@
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
-                            <p>
+                            <h1>
                                 在线咨询 & 留言
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
@@ -61,9 +61,9 @@
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
-                            <p>
+                            <h1>
                                 视野观点
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>
@@ -74,9 +74,9 @@
                     <div class="section-content image-bg center-content" style="background-image: url('../img/welcome3.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
-                            <p>
+                            <h1>
                                 形象传奇
-                            </p>
+                            </h1>
                         </div>
                     </div>
                 </a>

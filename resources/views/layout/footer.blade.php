@@ -1,6 +1,6 @@
 <div class=" move-cta-wrapper">
     <section class=" col-100 center">
-        <a href="../contact/index.html" class="move-button draw-border">
+        <a href="{{ route('web.platform.index') }}" class="move-button draw-border">
             保持联系
         </a>
     </section>

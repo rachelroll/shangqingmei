@@ -23,7 +23,7 @@ body.lang-undefined {
 }
 
 .wrap-iconic-case .text-image-row div.single-image {
-    background-color: #ddd;
+    background-color: #eee;
     /*padding: 32px;*/
     margin-right: 30px;
 }
@@ -50,3 +50,19 @@ body.lang-undefined {
     padding-top: 0;
 }
 
+.wrap-iconic-case .text-image-row .image-text p {
+    text-align:justify;
+}
+
+.red-border-box {
+    border-left: 4px solid red;
+    padding-left: 30px;
+    position: relative;
+    left: -31px;
+    height: 30px;
+    line-height: 30px
+}
+
+.red-border-box + ul {
+    margin-bottom: 60px
+}

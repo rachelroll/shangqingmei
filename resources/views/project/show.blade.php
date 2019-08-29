@@ -23,50 +23,96 @@
         margin: 20px 0;
     }
 </style>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @extends('layout/layout')
 @section('content')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
-            <div class="related-content-row" style="padding-top: 36px">
-                <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
-                         class="responsive">
-                    <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">整体作业方案</div>
-                        <h2 class="item-title">提供品牌建设的整体解决方案</h2>
-                        <div class="item-subtitle">
+            @if(request()->fullUrl() == route('web.project.list', ['id' => 3]))
+                <div class="related-content-row" style="padding-top: 10px">
+                    <a href="{{ route('web.project.list', ['id' => 1]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: A</div>
+                            <h2 class="item-title">CIS 导入案例</h2>
+                            <div class="item-subtitle">
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                    <a href="{{ route('web.project.list', ['id' => 2]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: B</div>
+                            <h2 class="item-title">品牌设计案例</h2>
+                            <div class="item-subtitle">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @elseif(request()->fullUrl() == route('web.project.list', ['id' => 2]))
+                <div class="related-content-row" style="padding-top: 10px">
+                    <a href="{{ route('web.project.list', ['id' => 1]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: A</div>
+                            <h2 class="item-title">CIS 导入案例</h2>
+                            <div class="item-subtitle">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ route('web.project.list', ['id' => 3]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: C</div>
+                            <h2 class="item-title">环境规划案例</h2>
+                            <div class="item-subtitle">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @else
+                <div class="related-content-row" style="padding-top: 10px">
+                    <a href="{{ route('web.project.list', ['id' => 2]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: B</div>
+                            <h2 class="item-title">品牌设计案例</h2>
+                            <div class="item-subtitle">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ route('web.project.list', ['id' => 3]) }}" class="search-result-item">
+                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                             class="responsive">
+                        <div class="overlay-text text-medium leading-small">
+                            <div class="item-tag">CASE: C</div>
+                            <h2 class="item-title">环境规划案例</h2>
+                            <div class="item-subtitle">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endif
+            <br>
+            <br>
 
-                <a href="{{ route('web.service.show', ['id' => 3]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
-                         class="responsive">
-                    <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">业务流程</div>
-                        <h2 class="item-title">提供品牌建设的整体解决方案</h2>
-                        <div class="item-subtitle">
-                        </div>
-                    </div>
-                </a>
-            </div>
-{{--            <div class="images-group">--}}
-{{--                <div class="images-row">--}}
-{{--                    <div class="col"  style="margin-top: 30px;">--}}
-{{--                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $project->cover }}">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
             <div class="text-image-row">
                 <div class="single-image">
                     @foreach($lists as $list)
-                    <h1>{{ $list->title }}</h1>
-                    <ul>
-                        @foreach($list->projects as $item)
-                        <li>- {{ $item->title }}</li>
-                            @endforeach
-                    </ul>
+                        <div class="red-border-box">
+                            <h1 style="font-weight: bold">{{ $list->title }}</h1>
+                        </div>
+
+                        <ul>
+                            @foreach($list->projects as $item)
+                            <li>- {{ $item->title }}</li>
+                                @endforeach
+                        </ul>
                     @endforeach
                 </div>
                 <div class="image-text">
@@ -87,12 +133,13 @@
                             时间: {{ $project->date }}
                         </p>
                     </div>
-                    <div class="images-group">
+                    <br>
+                    <div class="row">
                         @foreach($project->images as $image)
-                        <div class="images-row">
-                            <div class="col">
-                                <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
-                            </div>
+                        <div class="col-6" style="margin-bottom: 30px">
+{{--                            <div class="col">--}}
+                                <img src="{{ 'http:' .env('CDN_DOMAIN').'/'. $image }}">
+{{--                            </div>--}}
                         </div>
                         @endforeach
                     </div>

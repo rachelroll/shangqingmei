@@ -37,7 +37,9 @@
             <div class="text-image-row">
                 <div class="single-image">
                     @foreach($lists as $key => $list)
-                    <h1>{{ $key }}</h1>
+                        <div class="red-border-box">
+                            <h1>{{ $key }}</h1>
+                        </div>
                         <ul>
                             @foreach($list as $item)
                                 <li @if(request()->fullUrl() == route('web.platform.chuanqi', ['id' => $item->id])) style="color:red" @endif>

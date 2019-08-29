@@ -36,7 +36,7 @@
 
 @extends('layout/layout')
 @section('content')
-    <div class="full-main-container white-bg full-main-container-margin">
+    <div class="main-container white-bg full-main-container-margin">
         <div class="wrap-iconic-case">
             <div class="related-content-row" style="">
                 <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
@@ -48,7 +48,6 @@
                         </div>
                     </div>
                 </a>
-
                 <a href="{{ route('web.story.list', ['id' => 1]) }}" class="search-result-item">
                     <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
                          class="responsive">
@@ -60,7 +59,8 @@
                 </a>
             </div>
         </div>
-
+        <br>
+        <br>
         <div class="wrap-iconic-case">
             <div class="related-content-row" style="padding-top: 36px; justify-content: left">
                 <div class="col-100 text-huge base-margin-bottom">

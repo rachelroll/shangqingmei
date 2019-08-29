@@ -1,5 +1,8 @@
 <div class="single-image">
-    <h1>互动平台</h1>
+    <div class="red-border-box">
+        <h1>互动平台</h1>
+    </div>
+
     <ul>
         <li @if(request()->fullUrl() == route('web.platform.brand-consult')) style="color:red" @endif>
             <a href="{{ route('web.platform.brand-consult') }}">- 品牌问题咨询</a>
@@ -8,7 +11,9 @@
             <a href="{{ route('web.platform.visual-clinic') }}">- 视觉形象诊断</a>
         </li>
     </ul>
-    <h1>诊断案例</h1>
+    <div class="red-border-box">
+        <h1>诊断案例</h1>
+    </div>
     <ul>
         <li @if(request()->fullUrl() == route('web.platform.linian')) style="color:red" @endif>
             <a href="{{ route('web.platform.linian') }}">- CI 理念的厘清</a>
