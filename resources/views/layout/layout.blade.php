@@ -59,6 +59,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width = device-width, initial-scale = 0.8, user-scalable = no">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="bookmark" href="/favicon.ico" type="image/x-icon"　/>
     <title>
         尚清美
     </title>
@@ -68,7 +70,6 @@
     <!-- endinjector -->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <style> #mainNav.show .nav-toggle .hamburger .line2, #mainNav.show .nav-toggle .hamburger .line3 { margin-left: 3px; margin-top: -7px; } </style> <![endif]-->
-    <link href="../wp-content/themes/interbrand/img/favicon.ico" rel="shortcut icon"/>
     <style>/* Brute force correct wordpress admin bar */
         html {
             margin-top: 0 !important;

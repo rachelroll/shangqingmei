@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use App\ProjectCategory;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Facades\Agent;
 
 class ProjectController extends Controller
 {
@@ -18,7 +19,11 @@ class ProjectController extends Controller
     {
         $lists = ProjectCategory::where('project_id', $id)->with('projects')->get();
 
-        return view('project.list', compact('lists'));
+        if (Agent::isDesktop()) {
+            return view('project.list', compact('lists'));
+        } else {
+            return view('project.list-m', compact('lists'));
+        }
     }
 
     public function show($id)
