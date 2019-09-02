@@ -1,47 +1,48 @@
-<style>
-    .wrap-iconic-case .text-image-row div.single-image {
-        background-color: #ddd;
-        padding: 32px;
-        margin-right: 30px;
-    }
-
-
-    ul.nav {
-        background-color: #333;
-        overflow: auto;
-        /*white-space: nowrap;*/
-    }
-
-    li.nav-item {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-    }
-
-
-    div.scrollmenu {
-        background-color: #333;
-        overflow: auto;
-        white-space: nowrap;
-    }
-
-    div.scrollmenu div {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-    }
-
-    div.scrollmenu div:hover {
-        background-color: #777;
-    }
-</style>
-
-
 @extends('layout/layout')
+@section('style')
+    <style>
+        .wrap-iconic-case .text-image-row div.single-image {
+            background-color: #ddd;
+            padding: 32px;
+            margin-right: 30px;
+        }
+
+
+        ul.nav {
+            background-color: #333;
+            overflow: auto;
+            /*white-space: nowrap;*/
+        }
+
+        li.nav-item {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu div {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu div:hover {
+            background-color: #777;
+        }
+    </style>
+    @endsection
+
 @section('content')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
