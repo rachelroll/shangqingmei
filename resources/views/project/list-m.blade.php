@@ -43,25 +43,22 @@
         div.scrollmenu div:hover {
             background-color: #777;
         }
+
         .swiper-container .swiper-wrapper .swiper-slide {
             border: 1px solid red;
             position: relative;
-            /*height: 100px;*/
+            text-align: center;
+            padding: 6px 0;
         }
         .child {
             display: none;
             position: relative;
             width: 200%;
             border: 1px solid blue;
+            margin: 12px;
         }
         .parent {
             border: 1px solid green;
-        }
-        .show {
-            display: block;
-        }
-        .hide {
-            display: none;
         }
     </style>
     @endsection
@@ -180,7 +177,7 @@
 
 
             <div class="text-image-row">
-                
+
 {{--                这里是滑动导航--}}
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
