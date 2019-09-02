@@ -37,6 +37,7 @@
 
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="bookmark" href="/favicon.ico" type="image/x-icon" 　/>
+    @yield('css')
 
     <script type="text/javascript">
         ajaxurl = 'https://www.interbrand.com/wp-admin/admin-ajax.php';
@@ -194,6 +195,7 @@
 <script type="text/javascript">
     frt(95993);
 </script>
+@yield('script')
 <!-- End Salesfusion -->
 </body>
 </html>

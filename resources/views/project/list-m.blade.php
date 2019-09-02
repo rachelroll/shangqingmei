@@ -1,4 +1,7 @@
 @extends('layout/layout')
+@section('css')
+    <link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
+    @endsection
 @section('style')
     <style>
         .wrap-iconic-case .text-image-row div.single-image {
@@ -39,6 +42,26 @@
 
         div.scrollmenu div:hover {
             background-color: #777;
+        }
+        .swiper-container .swiper-wrapper .swiper-slide {
+            border: 1px solid red;
+            position: relative;
+            /*height: 100px;*/
+        }
+        .child {
+            display: none;
+            position: relative;
+            width: 200%;
+            border: 1px solid blue;
+        }
+        .parent {
+            border: 1px solid green;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
         }
     </style>
     @endsection
@@ -157,18 +180,25 @@
 
 
             <div class="text-image-row">
-                <div class="single-image">
-                    @foreach($lists as $list)
-                        <div class="red-border-box">
-                            <h1>{{ $list->title }}</h1>
+                
+{{--                这里是滑动导航--}}
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach($lists as $list)
+                        <div class="swiper-slide">
+                            <div class="parent">{{ $list->title }}</div>
+                            <ul class="child">
+                                @foreach($list->projects as $item)
+                                    <li ><a href="http://www.baidu.com">- {{ $item->title }}</a> </li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <ul>
-                            @foreach($list->projects as $item)
-                                <li>- {{ $item->title }}</li>
-                            @endforeach
-                        </ul>
-                    @endforeach
+                        @endforeach
+
+                    </div>
                 </div>
+                {{--                .end 这里是滑动导航--}}
+
 
                 <div class="image-text">
                     @foreach($lists as $list)
@@ -194,5 +224,29 @@
         </div>
     </div>
 @endsection
+@section('script')
+    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+
+
+        });
+        $(function() {
+            $('.parent').on('click',function(e) {
+                // e.preventDefault();
+                $(this).parent().siblings().children('.child').hide();
+                $(this).siblings().toggle(400)
+            })
+
+        })
+
+    </script>
+    @endsection
 
 
