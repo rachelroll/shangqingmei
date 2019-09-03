@@ -40,7 +40,7 @@
         <div class="wrap-iconic-case">
             <div class="related-content-row" style="">
                 <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                    <img src="../img/story_home_1st.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">VI/CI 设计</h2>
@@ -49,7 +49,7 @@
                     </div>
                 </a>
                 <a href="{{ route('web.story.list', ['id' => 1]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                    <img src="../img/story_home_2nd.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">行业经验</h2>

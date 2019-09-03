@@ -47,7 +47,7 @@
                         我们的三个重点领域:
                     </h2>
                     <div class="col-12" style="text-align:center">
-                        <img src="../wp-content/uploads/2019/05/IM_pillars.gif" />
+                        <img src="../img/aboutUS_3rd.gif" />
                     </div>
                 </div>
                 <div class="row numbered-list">
@@ -77,8 +77,8 @@
                     <div class="search-result-item hero-item no-hover-item">
                         <img src="../wp-content/themes/interbrand/img/approach_temp/PracticeFields/approach-people.jpg" class="responsive"/>
                         <div class="overlay-text text-medium leading-small">
-                            <div class="item-tag">Why Interbrand?</div>
-                            <h2 class="item-title">For more than forty years, we’ve been partnering with the world’s leading businesses to create Iconic Moves that transform perceptions and drive business growth.</h2>
+                            <div class="item-tag">我们的文化 - 保持理智与激情</div>
+                            <h2 class="item-title">好的设计不是在完成时评价, 而是在使用过程中, 逐渐体现出的实用性和品位.</h2>
                             <div class="item-subtitle">
                             </div>
                         </div>
