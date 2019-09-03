@@ -45,7 +45,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.story.list', ['id' => 2]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome1.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/story_home_1st.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: A</p>
                             <br/>
@@ -59,7 +59,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.story.list', ['id' => 1]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/welcome2.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/story_home_2nd.jpg'); color: #ffffff; text-align: center  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: B</p>
                             <br/>

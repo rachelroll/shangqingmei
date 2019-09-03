@@ -45,7 +45,7 @@
         }
 
         .swiper-container .swiper-wrapper .swiper-slide {
-            border: 1px solid red;
+            /*border: 1px solid red;*/
             position: relative;
             text-align: center;
             padding: 6px 0;
@@ -54,12 +54,31 @@
             display: none;
             position: relative;
             width: 200%;
-            border: 1px solid blue;
+            /*border: 1px solid blue;*/
             margin: 12px;
+            padding: 5px;
+            background-color: #eee;
+            font-size: 18px;
+            color: #666;
         }
         .parent {
-            border: 1px solid green;
+            /*border: 1px solid green;*/
+            font-size: 20px;
+            color: #666;
         }
+        .chile li {
+            margin-bottom: 10px;
+        }
+
+        .child::before{  /*这里的伪元素用单冒号和双冒号都一样*/
+            content: '';
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: 30px;
+            border-left: 10px solid transparent ;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #eee;
     </style>
     @endsection
 
@@ -170,11 +189,6 @@
                 </div>
             @endif
             <br>
-            <br>
-
-
-
-
 
             <div class="text-image-row">
 
@@ -186,7 +200,7 @@
                             <div class="parent">{{ $list->title }}</div>
                             <ul class="child">
                                 @foreach($list->projects as $item)
-                                    <li ><a href="http://www.baidu.com">- {{ $item->title }}</a> </li>
+                                    <li style="margin: 10px 0" ><a href="http://www.baidu.com">    {{ $item->title }}</a> </li>
                                 @endforeach
                             </ul>
                         </div>

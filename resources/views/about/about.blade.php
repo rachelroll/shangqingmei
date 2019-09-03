@@ -24,8 +24,8 @@
                     <video autoplay muted loop src="https://www.interbrand.com/wp-content/themes/interbrand//img/approach_temp/HeaderVideo/HeaderVideo.mp4"></video>
                     <div class="overlay-hero">
                         <div class="overlay-hero-title ">
-                            <h3 class="text-medium">Our Philosophy</h3>
-                            <h1 class="text-huge ">We believe in the combined power of empathy, analytics and creativity.</h1>
+                            <h3 class="text-medium">我们的理念</h3>
+                            <h1 class="text-huge ">内强文化, 外塑品牌, 为您成就商业梦想!</h1>
                         </div>
                     </div>
                 </div>
