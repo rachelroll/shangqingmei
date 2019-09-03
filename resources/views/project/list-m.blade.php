@@ -43,42 +43,69 @@
         div.scrollmenu div:hover {
             background-color: #777;
         }
+        /* clear float */
+            .clear:after {
+                display: block;
+                clear: both;
+                content: "";
+                visibility: hidden;
+                height: 0
+            }
 
+            .clear {
+                zoom: 1
+
+            }
+            /* end clear float */
+        .swiper-container .swiper-wrapper {
+            position: relative;
+        }
         .swiper-container .swiper-wrapper .swiper-slide {
             /*border: 1px solid red;*/
-            position: relative;
             text-align: center;
             padding: 6px 0;
         }
         .child {
             display: none;
-            position: relative;
-            width: 200%;
-            /*border: 1px solid blue;*/
-            margin: 12px;
-            padding: 5px;
-            background-color: #eee;
+            /*position: absolute;*/
+            /*z-index:999;*/
+            /*top: 100px;*/
+            width: 100%;
+            font-weight: normal;
+            padding: 10px 24px;
             font-size: 18px;
             color: #666;
         }
+        .child li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+
+        }
         .parent {
-            /*border: 1px solid green;*/
             font-size: 20px;
             color: #666;
+
         }
-        .chile li {
-            margin-bottom: 10px;
+        .red {
+            color: red;
         }
 
-        .child::before{  /*这里的伪元素用单冒号和双冒号都一样*/
-            content: '';
+        /*.child::before { !*这里的伪元素用单冒号和双冒号都一样*!*/
+        /*    content: '';*/
+        /*    display: block;*/
+        /*    !*position: absolute;*!*/
+        /*    top: -9px;*/
+        /*    left: 30px;*/
+        /*    border-left: 10px solid transparent;*/
+        /*    border-right: 10px solid transparent;*/
+        /*    border-bottom: 10px solid #eee;*/
+        /*}*/
+        .show {
             display: block;
-            position: absolute;
-            top: -9px;
-            left: 30px;
-            border-left: 10px solid transparent ;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #eee;
+        }
+        .hide {
+            display: none;
+        }
     </style>
     @endsection
 
@@ -194,20 +221,23 @@
 
 {{--                这里是滑动导航--}}
                 <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        @foreach($lists as $list)
+                    <div class="swiper-wrapper ">
+                        @foreach($lists as $key=>$list)
                         <div class="swiper-slide">
-                            <div class="parent">{{ $list->title }}</div>
-                            <ul class="child">
-                                @foreach($list->projects as $item)
-                                    <li style="margin: 10px 0" ><a href="http://www.baidu.com">    {{ $item->title }}</a> </li>
-                                @endforeach
-                            </ul>
+                            <div class="parent" data="{{ $key }}">{{ $list->title }}</div>
                         </div>
-                        @endforeach
 
+                        @endforeach
                     </div>
+                    @foreach($lists as $key=>$list)
+                    <ul class="child" id="{{$key}}">
+                        @foreach($list->projects as $item)
+                            <li ><a href="http://www.baidu.com">    {{ $item->title }}</a> </li>
+                        @endforeach
+                    </ul>
+                    @endforeach
                 </div>
+                <div class="clear"></div>
                 {{--                .end 这里是滑动导航--}}
 
 
@@ -251,8 +281,13 @@
         $(function() {
             $('.parent').on('click',function(e) {
                 // e.preventDefault();
-                $(this).parent().siblings().children('.child').hide();
-                $(this).siblings().toggle(400)
+                $('.parent').removeClass('red');
+                $(this).addClass('red');
+                var id = $(this).attr('data');
+                $('.child').not('#'+id).hide();
+                $('#'+id).toggle(400);
+                // $(this).parent().siblings().children('.child').hide();
+                // $(this).siblings().toggle(400)
             })
 
         })
