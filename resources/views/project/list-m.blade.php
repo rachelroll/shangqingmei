@@ -90,16 +90,6 @@
             color: red;
         }
 
-        /*.child::before { !*这里的伪元素用单冒号和双冒号都一样*!*/
-        /*    content: '';*/
-        /*    display: block;*/
-        /*    !*position: absolute;*!*/
-        /*    top: -9px;*/
-        /*    left: 30px;*/
-        /*    border-left: 10px solid transparent;*/
-        /*    border-right: 10px solid transparent;*/
-        /*    border-bottom: 10px solid #eee;*/
-        /*}*/
         .show {
             display: block;
         }
@@ -226,20 +216,18 @@
                         <div class="swiper-slide">
                             <div class="parent" data="{{ $key }}">{{ $list->title }}</div>
                         </div>
-
                         @endforeach
                     </div>
                     @foreach($lists as $key=>$list)
                     <ul class="child" id="{{$key}}">
                         @foreach($list->projects as $item)
-                            <li ><a href="http://www.baidu.com">    {{ $item->title }}</a> </li>
+                            <li ><a href="{{ route('web.project.show', ['id' => $item->id]) }}">{{ $item->title }}</a> </li>
                         @endforeach
                     </ul>
                     @endforeach
                 </div>
                 <div class="clear"></div>
                 {{--                .end 这里是滑动导航--}}
-
 
                 <div class="image-text">
                     @foreach($lists as $list)
@@ -275,8 +263,6 @@
                 el: '.swiper-pagination',
                 type: 'fraction',
             },
-
-
         });
         $(function() {
             $('.parent').on('click',function(e) {
