@@ -1,4 +1,4 @@
-pro<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -11,9 +11,8 @@ pro<?php
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// 首页
+Route::get('/', 'AboutController@home')->name('web.home');
 
 // 关于我们
 Route::get('/about', 'AboutController@index')->name('web.about');
@@ -31,7 +30,8 @@ Route::get('/project', 'ProjectController@index')->name('web.project.index');
 Route::get('/project-list/{id}', 'ProjectController@list')->name('web.project.list');
 // 作业案例详情页
 Route::get('/project/{id}', 'ProjectController@show')->name('web.project.show');
-
+// 案例搜索
+Route::post('/project/search', 'ProjectController@search')->name('web.project.search');
 
 // 作业故事首页
 Route::get('/stroy', 'StoryController@index')->name('web.stroy.index');

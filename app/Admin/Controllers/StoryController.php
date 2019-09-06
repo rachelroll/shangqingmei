@@ -78,7 +78,7 @@ class StoryController extends AdminController
         $form->text('date', __('时间'));
         $form->image('logo', __('上传 Logo 图'));
         $form->multipleImage('images', __('上传照片(支持多图)'));
-        $form->text('background', __('背景介绍'));
+        $form->simditor('background', '相关介绍')->rules('required',['required'=>'必填项']);
         $form->select('category', __('一级分类'))->options([
             1 => '行业经验',
             2 => 'CI 故事'

@@ -50,7 +50,7 @@
         {{--            搜索--}}
         <div class="menu-right-content">
             <button class="move-button draw-border" id="filter-menu-button">
-                搜索
+                搜索案例
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                      y="0px" viewBox="0 0 152.2 203.9" style="enable-background:new 0 0 152.2 203.9;" xml:space="preserve">
                         <g>
@@ -66,7 +66,8 @@
             <div class="menu-filter-wrap">
                 <nav class="menu-filter">
                     <button class="close-button" id="close-button">Close</button>
-                    <form role="search" method="get" autocomplete="off" action="../index.html">
+                    <form role="search" method="post" autocomplete="off" action="{{ route('web.project.search') }}">
+                        @csrf
                         <label class="text-huge is-start" id="seachbox-label">
 
                             <div class="search-icon">
@@ -85,24 +86,14 @@
                                    placeholder="" name="s" />
                         </label>
                     </form>
-
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/attract-capital/index.html"><h3>Attract Capital</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/captivate-new-audiences/index.html"><h3>Captivate New Audiences</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/command-a-premium/index.html"><h3>Command a Premium</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/create-new-arenas/index.html"><h3>Create New Arenas</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/design-a-growth-roadmap/index.html"><h3>Design a Growth Roadmap</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/drive-portfolio-growth/index.html"><h3>Drive Portfolio Growth</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/enhance-ma-or-spin-off-success/index.html"><h3>Enhance M&amp;A or Spin-off Success</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/enrich-customer-experiences/index.html"><h3>Enrich Customer Experiences</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/identify-new-revenue-opportunities/index.html"><h3>Identify New Revenue Opportunities</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/launch-new-offers/index.html"><h3>Launch New Offers</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/mobilize-talent/index.html"><h3>Mobilize Talent</h3></a>
-                    <a class="hover-red text-medium border-bottom " href="../our-expertise/rethink-metrics/index.html"><h3>Rethink Metrics</h3></a>
-
+                    @if($projects)
+                        @foreach($projects as $item)
+                    <a class="hover-red text-medium border-bottom " href="{{ route('web.project.show', ['id' => $item->id]) }}"><h3>{{ $item->title }}</h3></a>
+                        @endforeach
+                    @endif
                     <p class="menu-filter-description">
-                        Can’t find what you’re looking for? <a href="../contact/index.html">Get in touch</a>
+                        没有找到您想要的? <a href="{{ route('web.platform.index') }}">联系我们</a>
                     </p>
-
                 </nav>
 
                 <div class="menu-veil" id="menu-filter-veil"> </div>

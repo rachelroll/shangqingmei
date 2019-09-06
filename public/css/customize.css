@@ -66,3 +66,8 @@ body.lang-undefined {
 .red-border-box + ul {
     margin-bottom: 60px
 }
+
+span.bold, h1.bold {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -138,7 +138,7 @@
             @if(request()->fullUrl() == route('web.project.list', ['id' => 3]))
                 <div class="related-content-row" style="padding-top: 10px">
                     <a href="{{ route('web.project.list', ['id' => 1]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                        <img src="../img/case_home_1st.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: A</div>
@@ -148,7 +148,7 @@
                         </div>
                     </a>
                     <a href="{{ route('web.project.list', ['id' => 2]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                        <img src="../img/case_home_2nd.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: B</div>
@@ -161,7 +161,7 @@
             @elseif(request()->fullUrl() == route('web.project.list', ['id' => 2]))
                 <div class="related-content-row" style="padding-top: 10px">
                     <a href="{{ route('web.project.list', ['id' => 1]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                        <img src="../img/case_home_1st.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: A</div>
@@ -171,7 +171,7 @@
                         </div>
                     </a>
                     <a href="{{ route('web.project.list', ['id' => 3]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                        <img src="../img/case_home_3rd.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: C</div>
@@ -184,7 +184,7 @@
             @else
                 <div class="related-content-row" style="padding-top: 10px">
                     <a href="{{ route('web.project.list', ['id' => 2]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                        <img src="../img/case_home_2nd.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: B</div>
@@ -194,7 +194,7 @@
                         </div>
                     </a>
                     <a href="{{ route('web.project.list', ['id' => 3]) }}" class="search-result-item">
-                        <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                        <img src="../img/case_home_3rd.jpg"
                              class="responsive">
                         <div class="overlay-text text-medium leading-small">
                             <div class="item-tag">CASE: C</div>

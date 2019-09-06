@@ -10,33 +10,34 @@ class StoryController extends Controller
 
     public function index()
     {
-        return view('story.index');
+        $projects = $this->projects;
+        return view('story.index', compact('projects'));
     }
 
     public function list(Request $request)
     {
+        $projects = $this->projects;
+
         $cat = $request->type;
 
         $lists = Story::where('category', $cat)->get();
 
-        return view('story.list', compact('lists'));
+        return view('story.list', compact('lists', 'projects'));
     }
 
     public function show($id)
     {
+        $projects = $this->projects;
         $story = Story::find($id);
-        $category = $story->category;
-        $lists = Story::where('category', $category)->get();
+        $lists = Story::all()->groupBy('category');
         $nav = [];
-        foreach ($lists as $item) {
-            $sub_cats = Story::where('sub_category', $item->sub_category)->pluck('client_name');
-            foreach ($sub_cats as $sub) {
-                $nav[$item->sub_category][] = $sub;
+        foreach ($lists as $cat => $categories) {
+            foreach($categories as $key => $item) {
+                $nav[$cat][] = $item;
             }
         }
 
-
-        return view('story.show', compact('story', 'nav'));
+        return view('story.show', compact('story', 'nav', 'projects'));
     }
 }
 

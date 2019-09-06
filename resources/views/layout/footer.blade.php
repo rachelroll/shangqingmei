@@ -18,27 +18,27 @@
             <div>
                 <div class="is-start col-100">
                     <span class="main-follow-title">网页</span>
-                    <a href="../index.html" class="hover-red">
+                    <a href="{{ route('web.home') }}" class="hover-red">
                         首页
                     </a>
 
-                    <a href="../philosophy/index.html" class="hover-red">
+                    <a href="{{ route('web.about') }}" class="hover-red">
                         关于我们
                     </a>
 
-                    <a href="../iconic-moves/index.html" class="hover-red">
+                    <a href="{{ route('web.service.index') }}" class="hover-red">
                         服务能力
                     </a>
 
-                    <a href="../about/index.html" class="hover-red">
+                    <a href="{{ route('web.project.index') }}" class="hover-red">
                         服务案例
                     </a>
 
-                    <a href="index.html" class="hover-red">
+                    <a href="{{ route('web.stroy.index') }}" class="hover-red">
                         作业故事
                     </a>
 
-                    <a href="../best-brands/index.html" class="hover-red">
+                    <a href="{{ route('web.platform.index') }}" class="hover-red">
                         互动平台
                     </a>
                 </div>

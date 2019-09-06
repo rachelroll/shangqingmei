@@ -72,8 +72,10 @@
                 </div>
                 @foreach($lists as $list)
                     <div class="col-25 block" style="padding: 0" id="{{ $list->id }}">
-                        <p class="big-font">{{ $list->client_name }}</p>
-                        <p class="small-font">{{ $list->sub_category }}</p>
+                        <div style="padding: 0 20px">
+                            <p class="big-font">{{ $list->client_name }}</p>
+                            <p class="small-font">{{ $list->sub_category }}</p>
+                        </div>
                         <div class="mask" style="display: none"></div>
                     </div>
                 @endforeach
