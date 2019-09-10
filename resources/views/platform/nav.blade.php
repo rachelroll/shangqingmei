@@ -187,7 +187,6 @@
 </div>
 <div class="clear"></div>
 {{--                .end 这里是滑动导航--}}
-<br>
 @endif
 
 
@@ -195,8 +194,8 @@
     <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: -10,
+            slidesPerView: 4,
+            spaceBetween: 10,
             pagination: {
                 el: '.swiper-pagination',
                 type: 'fraction',
