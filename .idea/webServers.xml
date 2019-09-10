@@ -2,12 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="5719c08b-c713-4a42-a0a5-8aedd491d442" name="shang" url="http://47.105.51.39">
-        <fileTransfer host="47.105.51.39" port="21">
+      <webServer id="5719c08b-c713-4a42-a0a5-8aedd491d442" name="shang" url="http://47.89.32.117">
+        <fileTransfer host="47.89.32.117" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
-          <option name="port" value="21" />
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

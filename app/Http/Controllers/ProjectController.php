@@ -36,7 +36,12 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $cat_id = $project->project_category_id;
         $lists = ProjectCategory::where('project_id', $cat_id)->with('projects')->get();
-        return view('project.show', compact('project', 'lists', 'projects'));
+
+        if (Agent::isDesktop()) {
+            return view('project.show', compact('project', 'lists', 'projects'));
+        } else {
+            return view('project.show-m', compact('project', 'lists', 'projects'));
+        }
     }
 
     // 搜索

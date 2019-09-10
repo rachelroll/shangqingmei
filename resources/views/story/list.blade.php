@@ -33,6 +33,7 @@
         margin-top: 16px;
     }
 </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 @extends('layout/layout')
 @section('content')
@@ -70,15 +71,28 @@
                         <h2>CI 故事</h2>
                     @endif
                 </div>
+
+                <div class="row" style="margin-left: 0">
                 @foreach($lists as $list)
-                    <div class="col-25 block" style="padding: 0" id="{{ $list->id }}">
-                        <div style="padding: 0 20px">
-                            <p class="big-font">{{ $list->client_name }}</p>
-                            <p class="small-font">{{ $list->sub_category }}</p>
+                    @if(Agent::isDesktop())
+                        <div class="col-3 block" style="padding: 0" id="{{ $list->id }}">
+                            <div style="padding: 0 20px">
+                                <p class="big-font">{{ $list->client_name }}</p>
+                                <p class="small-font">{{ $list->sub_category }}</p>
+                            </div>
+                            <div class="mask" style="display: none"></div>
                         </div>
-                        <div class="mask" style="display: none"></div>
-                    </div>
+                    @else
+                        <div class="col-12 block" style="padding: 0" id="{{ $list->id }}">
+                            <div style="padding: 0 20px">
+                                <p class="big-font">{{ $list->client_name }}</p>
+                                <p class="small-font">{{ $list->sub_category }}</p>
+                            </div>
+                            <div class="mask" style="display: none"></div>
+                        </div>
+                    @endif
                 @endforeach
+                </div>
             </div>
         </div>
         <br>
@@ -89,7 +103,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $(".col-25").hover(function(){
+        $(".block").hover(function(){
             $(this).children(".mask").css("height",$(".block").height());
             $(this).children(".mask").css("width",$(".block").width());
             $(this).children("p.big-font").css('font-size', '34px');
@@ -101,7 +115,7 @@
             $(this).children("p.small-font").css('font-size', '18px');
         });
 
-        $(".col-25").click(function () {
+        $(".block").click(function () {
             var id = $(this).attr('id');
             window.location.href="../story/" + id;
         })

@@ -22,7 +22,7 @@
                     </p>
                 </div>
 
-                <a href="{{ route('web.project.show', ['id' => 1]) }}"  target="_blank" class="move-button draw-border-white">
+                <a href="{{ route('web.project.list', ['id' => 1]) }}"  target="_blank" class="move-button draw-border-white">
                     查看详情
                 </a>
             </div>
@@ -38,7 +38,7 @@
                         从本质上说，品牌是在传递一种信息。品牌不单单是一种名称、标记、符号或设计，或它们的组合运用，更重要的是品牌所传递的价值、文化和个性，它们确定了品牌的基础。 我们的作业核心是发现价值，然后权衡和重组品牌规划
                     </p>
                 </div>
-                <a href="{{ route('web.project.show', ['id' => 2]) }}"  target="_blank" class="move-button draw-border-white">
+                <a href="{{ route('web.project.list', ['id' => 2]) }}"  target="_blank" class="move-button draw-border-white">
                     查看详情
                 </a>
             </div>
@@ -53,7 +53,7 @@
                         环境给予人的影响是那么直接而强烈，在环境识别设计、专卖店设计、主题环境方面，我们将品牌意识融入立体的形式与空间，形成品牌体验，建立个性鲜活的品牌传播力。
                     </p>
                 </div>
-                <a href="{{ route('web.project.show', ['id' => 3]) }}"  target="_blank" class="move-button draw-border-white">
+                <a href="{{ route('web.project.list', ['id' => 3]) }}"  target="_blank" class="move-button draw-border-white">
                     查看详情
                 </a>
             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Story;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Facades\Agent;
 
 class StoryController extends Controller
 {
@@ -37,7 +38,11 @@ class StoryController extends Controller
             }
         }
 
-        return view('story.show', compact('story', 'nav', 'projects'));
+        if (Agent::isDesktop()) {
+            return view('story.show', compact('story', 'nav', 'projects'));
+        } else {
+            return view('story.show-m', compact('story', 'nav', 'projects'));
+        }
     }
 }
 

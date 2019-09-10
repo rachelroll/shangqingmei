@@ -1,6 +1,7 @@
 <style>
     .main-footer.m-footer a {
         margin: 6px 30px 0 0;
+        color: #fff;
     }
 </style>
 
@@ -47,7 +48,7 @@
                 <div class="is-start col-100" style="display: flex; justify-content:space-between;">
                     <div>
                         <span class="main-follow-title">联系我们</span>
-                        <a href="" class="hover-red">
+                        <a href="" class="hover-red" >
                             地址: 北京市海淀区大觉寺路 7 号 (100095)
                         </a>
                         <a href="" class="hover-red">
