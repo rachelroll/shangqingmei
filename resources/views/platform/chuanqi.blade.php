@@ -13,7 +13,7 @@
         <div class="wrap-iconic-case">
             <div class="related-content-row">
                 <a href="{{ route('web.platform.brand-consult') }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                    <img src="../img/Interactive_home_1st.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">在线咨询 & 留言</h2>
@@ -23,7 +23,7 @@
                 </a>
 
                 <a href="{{ route('web.platform.opinion') }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                    <img src="../img/Interactive_home_2nd.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">视野观点</h2>

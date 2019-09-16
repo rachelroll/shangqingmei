@@ -23,14 +23,14 @@
         margin: 20px 0;
     }
 </style>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @extends('layout/layout')
 @section('content')
     <div class="main-container white-bg main-container-margin">
         <div class="wrap-iconic-case">
             <div class="related-content-row">
                 <a href="{{ route('web.story.list', ['id' => 2]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                    <img src="../img/story_home_1st.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">VI/CI 设计</h2>
@@ -39,7 +39,7 @@
                     </div>
                 </a>
                 <a href="{{ route('web.story.list', ['id' => 1]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                    <img src="../img/story_home_2nd.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
                         <h2 class="item-title">行业经验</h2>
@@ -54,36 +54,56 @@
                 <div class="single-image">
                     @foreach($nav as $key => $list)
                         <div class="red-border-box">
-                            <h1>{{ $key }}</h1>
+                            @if( $key == 1 )
+                            <h1>VI / CI 设计</h1>
+                            @else
+                            <h1>行业经验</h1>
+                            @endif
                         </div>
                         <ul>
                             @foreach($list as $item)
-                                <li>- {{ $item }}</li>
+                                <li @if(request()->fullUrl() == route('web.story.show', ['id' => $item['id']])) style="color: red" @endif   >
+                                    <a href="{{ route('web.story.show', ['id' => $item['id']]) }}">
+                                        - {{ $item['client_name'] }}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     @endforeach
                 </div>
                 <div class="image-text">
                     <div class="text-body">
-                        <p>
-                            客户: {{ $story->client_name }}
-                        </p>
-                        <p>
-                            类型: {{ $story->type_name }}
-                        </p>
-                        <p>
-                            内容: {{ $story->content }}
-                        </p>
-                        <p>
-                            时间: {{ $story->date }}
-                        </p>
+                        <div class="row">
+                            <div class="col-10">
+                                <p>
+                                    <span class="bold">客户:</span> {{ $story->client_name }}
+                                </p>
+                                <p>
+                                    <span class="bold">类型:</span> {{ $story->type_name }}
+                                </p>
+                                <p>
+                                    <span class="bold">内容:</span> {{ $story->content }}
+                                </p>
+                                <p>
+                                    <span class="bold">时间:</span> {{ $story->date }}
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $story->logo }}" alt=""/>
+                            </div>
+                        </div>
+                        <br>
+
+                        {!! $story->background !!}
                     </div>
-                    <div class="images-group">
+                    <br>
+                    <br>
+                    <div class="row">
                         @foreach($story->images as $image)
-                            <div class="images-row">
-                                <div class="col">
+                            <div class="col-6" style="margin-bottom: 30px">
+{{--                                <div class="col">--}}
                                     <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $image }}">
-                                </div>
+{{--                                </div>--}}
                             </div>
                         @endforeach
                     </div>

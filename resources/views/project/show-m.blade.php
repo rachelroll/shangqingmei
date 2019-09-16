@@ -1,8 +1,7 @@
 @extends('layout/layout')
 @section('css')
     <link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    @endsection
+@endsection
 @section('style')
     <style>
         .wrap-iconic-case .text-image-row div.single-image {
@@ -45,19 +44,19 @@
             background-color: #777;
         }
         /* clear float */
-            .clear:after {
-                display: block;
-                clear: both;
-                content: "";
-                visibility: hidden;
-                height: 0
-            }
+        .clear:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
 
-            .clear {
-                zoom: 1
+        .clear {
+            zoom: 1
 
-            }
-            /* end clear float */
+        }
+        /* end clear float */
         .swiper-container .swiper-wrapper {
             position: relative;
         }
@@ -73,7 +72,7 @@
             /*top: 100px;*/
             width: 100%;
             font-weight: normal;
-            /*padding: 10px;*/
+            padding: 10px;
             font-size: 18px;
             color: #666;
         }
@@ -83,7 +82,7 @@
 
         }
         .parent {
-            font-size: 18px;
+            font-size: 20px;
             color: #666;
 
         }
@@ -99,43 +98,10 @@
             display: none;
         }
     </style>
-    @endsection
+@endsection
 
 @section('content')
     <div class="main-container white-bg main-container-margin">
-        <div class="wrap-iconic-case">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/project-list1.jpg" style="width: 120%" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 style="color: #666">第一张轮播图</h5>
-                            <p style="color: #666">可以写些文字</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/project-list2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>第二张轮播图</h5>
-                            <p>可以写些文字</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
         <div class="wrap-iconic-case">
             @if(request()->fullUrl() == route('web.project.list', ['id' => 3]))
                 <div class="related-content-row" style="padding-top: 10px">
@@ -208,58 +174,61 @@
                 </div>
             @endif
             <br>
-            <br>
 
             <div class="text-image-row">
 
-{{--                这里是滑动导航--}}
+                {{--                这里是滑动导航--}}
                 <div class="swiper-container">
                     <div class="swiper-wrapper ">
                         @foreach($lists as $key=>$list)
-                        <div class="swiper-slide" style="width: 70px;">
-                            <div class="parent" data="{{ $key }}">
-                                {{ $list->title }}
+                            <div class="swiper-slide">
+                                <div class="parent" data="{{ $key }}">{{ $list->title }}</div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                     @foreach($lists as $key=>$list)
-                    <ul class="child" id="{{$key}}">
-                        @foreach($list->projects as $item)
-                            <li >
-                                <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="color: #333">
-                                    {{ $item->title }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+                        <ul class="child" id="{{$key}}">
+                            @foreach($list->projects as $item)
+                                <li ><a href="{{ route('web.project.show', ['id' => $item->id]) }}">{{ $item->title }}</a> </li>
+                            @endforeach
+                        </ul>
                     @endforeach
                 </div>
-
                 <div class="clear"></div>
                 {{--                .end 这里是滑动导航--}}
 
                 <br>
+                <br>
                 <div class="image-text">
-                    @foreach($lists as $list)
-                        @foreach($list->projects as $item)
-                            <div class="text-body">
-                            <h5 style="margin: 20px 0">
-                                {{ $item->title }}
-                            </h5>
-                        </div>
-                        <a href="{{ route('web.project.show', ['id' => $item->id]) }}">
-                            <div class="images-group" style="margin-bottom: 60px">
-                                <div class="images-row">
-                                    <div class="col">
-                                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $item->cover }}">
-                                    </div>
+                    <div class="text-body">
+                        <p style="margin-bottom: 20px; font-weight: bold">
+                            {{ $project->title }}
+                        </p>
+                        <p>
+                            客户: {{ $project->client }}
+                        </p>
+                        <p>
+                            类型: {{ $project->type }}
+                        </p>
+                        <p>
+                            内容: {{ $project->content }}
+                        </p>
+                        <p>
+                            时间: {{ $project->date }}
+                        </p>
+                    </div>
+                    <br>
+                    @foreach($project->images as $image)
+                        <div class="images-group" style="margin-bottom: 30px">
+                            <div class="images-row">
+                                <div class="col">
+                                    <img src="{{ 'http:' .env('CDN_DOMAIN').'/'. $image }}">
                                 </div>
                             </div>
-                        </a>
-                        @endforeach
+                        </div>
                     @endforeach
                 </div>
+
                 <br>
             </div>
         </div>
@@ -276,19 +245,21 @@
                 type: 'fraction',
             },
         });
-
         $(function() {
             $('.parent').on('click',function(e) {
                 // e.preventDefault();
                 $('.parent').removeClass('red');
+                $(this).addClass('red');
                 var id = $(this).attr('data');
                 $('.child').not('#'+id).hide();
                 $('#'+id).toggle(400);
-                $(this).toggleClass("red");
                 // $(this).parent().siblings().children('.child').hide();
+                // $(this).siblings().toggle(400)
             })
+
         })
+
     </script>
-    @endsection
+@endsection
 
 

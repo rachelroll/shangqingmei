@@ -1,4 +1,3 @@
-
 {{--                互动留言--}}
 <br>
 <br>
@@ -12,11 +11,12 @@
             <textarea name="content" cols="" rows=""  class="input scrollbar" id="content" onpropertychange="textCounter(this, 500)" onfocus="if (value =='写下你想说的，开始我们的对话'){value =''}" onblur="if (value ==''){value='写下你想说的，开始我们的对话'}">写下你想说的，开始我们的对话</textarea>
             <br>
 
+            @if(Agent::isDesktop())
             <div class="input_ok">
                 <div class="function" style="position:relative;">
                     <div id="biaoqing">
                         <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
-                        <div class="bq_line">
+                        <div class="bq_line" style="background-color: #fff; height: 135px">
                             <dl>
                                 <dd class="expression"><a href="javascript:;" title="微笑"><img src="/img/bq/wx.gif"></a></dd>
                                 <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
@@ -88,6 +88,89 @@
                     <input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
                 </div>
             </div>
+            @else
+{{--                <div class="">--}}
+                    <div class="function" style="position:relative;">
+                        <div id="biaoqing">
+                            <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
+                            <div class="bq_line">
+                                <dl>
+                                    <dd class="expression"><a href="javascript:;" title="头像"><img src="/img/Avatar_boy_54x54.png"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="心花怒放"><img src="/img/bq/xhnf.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="鼓掌"><img src="/img/bq/gz.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="哈欠"><img src="/img/bq/hax.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="憨笑"><img src="/img/bq/sx.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="汗"><img src="/img/bq/han.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="吃惊"><img src="/img/bq/cj.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="鄙视"><img src="/img/bq/bs.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="闭嘴"><img src="/img/bq/bz.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="呲牙"><img src="/img/bq/cy.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="害羞"><img src="/img/bq/hx.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="衰"><img src="/img/bq/shuai.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="偷笑"><img src="/img/bq/tx.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="折磨"><img src="/img/bq/zm.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="难过"><img src="/img/bq/ng.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="示爱"><img src="/img/bq/sa.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="可爱"><img src="/img/bq/ka.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="泪"><img src="/img/bq/lei.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="酷"><img src="/img/bq/cool.gif"></a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="gn_photo">
+                            <div class="gn_photo_line">
+                                <div id="function_close"><a href="javascript:;" title="关闭" id="ph_close"></a></div>
+                                <dl>
+                                    <dd class="tips">上传本地图片不能超过2M</dd>
+                                    <dd class="upload"><a href="javascript:;" title="上传图片">上传图片</a><input name="Filedata" type="file" id="upp"></dd>
+                                    <dd class="link"><a href="javascript:;" title="图片链接" id="show_url">图片链接</a></dd>
+                                </dl>
+                            </div>
+                            <div id="gn_photo_2">
+                                <div id="function_close"><a href="javascript:;" title="关闭" id="url_close"></a></div>
+                                <div class="gn_photo_link">
+                                    <dl>
+                                        <dd class="p_input"><input  type="text" class="photo_input" id="photo_url"></dd>
+                                        <dd class="p_submit"><input name="photo_submit" type="button" class="photo_submit" value="确定">
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div id="gn_photo_3">
+                                <div id="function_close"><a href="javascript:;" title="关闭" class="pic_close"></a></div>
+                                <div class="gn_photo_img"><img class="shopimg" src=""></div>
+                            </div>
+                            <div id="gn_photo_4">
+                                <div id="function_close"><a id="del_close" href="javascript:;" title="关闭"></a></div>
+                                <div class="gn_photo_img">
+                                    <dl>
+                                        <dd class="tips2">确定删除吗？</dd>
+                                        <dd class="submit2">
+                                            <a href="javascript:;" title="确定" id="ajax_del">确定</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <dl>
+                            <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"></a></dd>
+                            <dd class="img"><a href="javascript:;" title="添加图片" id="show_ph"></a></dd>
+                        </dl>
+                    </div>
+                    <div style="clear:both"></div>
+                <br>
+                    <div class="row justify-content-between" style="margin-left: 0">
+                        <div class="input_name col" style="background-image: none">
+                            <input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
+                        </div>
+                        <div class="input_submit col align-self-end">
+                            <input  type="submit" class="botton" onClick="return checkdata();" value="发 布" />
+                        </div>
+                    </div>
+
+{{--                </div>--}}
+             @endif
         </form>
     </div>
 </div>

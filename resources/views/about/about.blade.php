@@ -21,13 +21,13 @@
         <section id="mainBody" class="about">
             <div class="row hero-row full-screen-row video-row">
                 <div class="hero-container hero-video-container">
-                    <video autoplay muted loop src="https://www.interbrand.com/wp-content/themes/interbrand//img/approach_temp/HeaderVideo/HeaderVideo.mp4"></video>
-                    <div class="overlay-hero">
-                        <div class="overlay-hero-title ">
-                            <h3 class="text-medium">我们的理念</h3>
-                            <h1 class="text-huge ">内强文化, 外塑品牌, 为您成就商业梦想!</h1>
-                        </div>
-                    </div>
+                    <video autoplay muted loop src="https://zhongfu-company.oss-cn-hangzhou.aliyuncs.com/shangqingmei/aboutUS.mp4"></video>
+{{--                    <div class="overlay-hero">--}}
+{{--                        <div class="overlay-hero-title ">--}}
+{{--                            <h3 class="text-medium">我们的理念</h3>--}}
+{{--                            <h1 class="text-huge ">内强文化, 外塑品牌, 为您成就商业梦想!</h1>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
             <div class="wrap-approach wrap-content">
@@ -47,7 +47,7 @@
                         我们的三个重点领域:
                     </h2>
                     <div class="col-12" style="text-align:center">
-                        <img src="../wp-content/uploads/2019/05/IM_pillars.gif" />
+                        <img src="../img/aboutUS_3rd.gif" />
                     </div>
                 </div>
                 <div class="row numbered-list">
@@ -75,10 +75,10 @@
                 </div>
                 <div class="row">
                     <div class="search-result-item hero-item no-hover-item">
-                        <img src="../wp-content/themes/interbrand/img/approach_temp/PracticeFields/approach-people.jpg" class="responsive"/>
+                        <img src="../img/aboutUS_4th_1920x970.jpg" class="responsive"/>
                         <div class="overlay-text text-medium leading-small">
-                            <div class="item-tag">Why Interbrand?</div>
-                            <h2 class="item-title">For more than forty years, we’ve been partnering with the world’s leading businesses to create Iconic Moves that transform perceptions and drive business growth.</h2>
+{{--                            <div class="item-tag">我们的文化 - 保持理智与激情</div>--}}
+{{--                            <h2 class="item-title">好的设计不是在完成时评价, 而是在使用过程中, 逐渐体现出的实用性和品位.</h2>--}}
                             <div class="item-subtitle">
                             </div>
                         </div>
@@ -86,28 +86,28 @@
                 </div>
                 <div class="row two-columns-list">
                     <h2 class="section-title">我们的作业理念:</h2>
-                    <a class="item" href="../our-expertise/attract-capital/index.html">
+                    <a class="item">
                         <h3>想得更宽更远</h3>
                         <p>所有强势的品牌，都源于一个高瞻的理念，是思想的高度决定了品牌成长的速度。
                             为了塑造、建立和管理优秀的品牌，我们以策略性思考，在纷繁芜杂的市场资料中理出一张简单地图，精确而简洁的为品牌策略定向，并对须要采取的行动提出前瞻性及详尽的建议。</p>
                     </a>
-                    <a class="item" href="../our-expertise/captivate-new-audiences/index.html">
+                    <a class="item">
                         <h3>专业的设计与策划</h3>
                         <p>尚清美团队的专业人员：设计师与专业顾问，拥有海内外专业学习或从业数年的经历。他们当中多数人拥有为世界知名品牌、企业提供设计、策划服务的经历。同时，他们激情十足，对工作充满热情。</p>
                     </a>
-                    <a class="item" href="../our-expertise/command-a-premium/index.html">
+                    <a class="item">
                         <h3>资源广泛、目标一致</h3>
                         <p>每个尚清美的设计师与策划人，都拥有自己独立发展的巨大空间。在这个过程中，他们以各自的工作特点与思维形式为品牌做出贡献。同时，每个人又都具备高度的协作与合作意识，一切的工作都以客户的利益为目的。</p>
                     </a>
-                    <a class="item" href="../our-expertise/create-new-arenas/index.html">
+                    <a class="item">
                         <h3>真实的创意能力</h3>
                         <p>在尚清美，最迷人的时间是创意会议时间----经过严谨的市场研究、反复的客户沟通，策略已经明确；而为了在人们混沌的心智中获得关注，我们需要找到一个杰出的商业观念，简单、明确而又命中目标。好的创意使这个过程成为一次非常美妙的探险。</p>
                     </a>
-                    <a class="item" href="../our-expertise/drive-portfolio-growth/index.html">
+                    <a class="item">
                         <h3>保持竞争力</h3>
                         <p>我们的团队彼此信任、彼此倚重；无边界的沟通有效的促进了项目执行力，降低项目的成本与风险，保障了客户品牌资产的有效增值。不断进步、不断创新，才会给予我们的客户不断地惊喜。 </p>
                     </a>
-                    <a class="item" href="../our-expertise/enhance-ma-or-spin-off-success/index.html">
+                    <a class="item">
                         <h3>经验丰富的团队</h3>
                         <p>尚清美团队汇聚了不同年龄、不同经历的设计师与策划人。他们当中有从业20多年，拥有国际一流设计作品的设计大师，也有受新艺术形式和思想熏陶、开创设计先河的行业先锋。这样的组合，使我们能够游刃有余地满足不同企业、不同行业领域的品牌建设需求。</p>
                     </a>

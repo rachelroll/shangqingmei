@@ -240,21 +240,21 @@
             <div class="related-content-row">
                 <h3 class="col-100 no-padding text-large base-margin-top base-margin-bottom">相关内容</h3>
                 <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/Sensodyne-True-White-Group.png"
+                    <img src="../img/Ability_home_1st.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">整体作业方案</div>
-                        <h2 class="item-title">提供品牌建设的整体解决方案</h2>
+                        <div class="item-tag">作业八法</div>
+                        <h2 class="item-title">独具特色的尚清美八法</h2>
                         <div class="item-subtitle">
                         </div>
                     </div>
                 </a>
 
                 <a href="{{ route('web.service.show', ['id' => 3]) }}" class="search-result-item">
-                    <img src="../../wp-content/uploads/2019/03/65883ce860-Recovered.png"
+                    <img src="../img/Ability_home_2nd.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
-                        <div class="item-tag">业务流程</div>
+                        <div class="item-tag">整体作业方案</div>
                         <h2 class="item-title">提供品牌建设的整体解决方案</h2>
                         <div class="item-subtitle">
                         </div>

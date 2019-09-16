@@ -14,20 +14,23 @@ class PlatformController extends Controller
     // 互动平台首页
     public function index()
     {
-        return view('platform.index');
+        $projects = $this->projects;
+        return view('platform.index', compact('projects'));
     }
 
     // 品牌问题咨询
     public function brandConsult()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
 
-        return view('platform.brand_consult', compact('messages'));
+        return view('platform.brand_consult', compact('messages', 'projects'));
     }
 
     // 品牌问题存储
     public function consultStore(Request $request)
     {
+        $projects = $this->projects;
         BrandConsult::create([
             'name' => $request->input('name', '匿名'),
             'email' => $request->input('email', ''),
@@ -40,11 +43,12 @@ class PlatformController extends Controller
             'service' => $request->input('service', ''),
         ]);
 
-        return back()->with('success', '提交成功');
+        return back()->with('success', '提交成功', compact('projects'));
     }
 
     public function VisualClinicStore(Request $request)
     {
+        $projects = $this->projects;
         try {
             Platform::create([
                 'company' => $request->input('company'),
@@ -62,40 +66,45 @@ class PlatformController extends Controller
 
             return back()->with('success', '提交成功');
         } catch (\Exception $e) {
-            return back()->with('error', $e->getMessage());
+            return back()->with('error', $e->getMessage(), compact('projects'));
         }
     }
 
     public function visualClinic()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
-        return view('platform.visual_clinic', compact('messages'));
+        return view('platform.visual_clinic', compact('messages', 'projects'));
     }
 
     public function linian()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
-        return view('platform.linian', compact('messages'));
+        return view('platform.linian', compact('messages', 'projects'));
     }
 
     // 形象更新案例
     public function updateCase()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
-        return view('platform.update_case', compact('messages'));
+        return view('platform.update_case', compact('messages', 'projects'));
     }
 
     // 形象过渡案例
     public function transformCase()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
-        return view('platform.transform_case', compact('messages'));
+        return view('platform.transform_case', compact('messages', 'projects'));
     }
 
 
     // 视野观点
     public function opinion()
     {
+        $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
         $files = Opinion::all();
         $ci_files = $brand_files = $sales_files = [];
@@ -112,16 +121,18 @@ class PlatformController extends Controller
             }
         }
 
-        return view('platform.opinion', compact('messages', 'ci_files', 'brand_files', 'sales_files'));
+        return view('platform.opinion', compact('messages', 'ci_files', 'brand_files', 'sales_files', 'projects'));
     }
 
     public function chuanqi($id)
     {
+        $projects = $this->projects;
+
         $chuanqi = Chuanqi::find($id);
 
         $lists = Chuanqi::get()->groupBy('type');
 
         $messages = Message::orderby('id', 'DESC')->get();
-        return view('platform.chuanqi', compact('chuanqi', 'lists', 'messages'));
+        return view('platform.chuanqi', compact('chuanqi', 'lists', 'messages', 'projects'));
     }
 }
