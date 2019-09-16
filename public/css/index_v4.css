@@ -1468,6 +1468,7 @@ img {
     height: 20px;
     float: left;
     padding-right: 20px;
+
 }
 
 .function dd.bq a {
@@ -1535,8 +1536,8 @@ img {
     width: 38px;
     line-height: 38px;
     text-align: center;
-    margin-top: 1px;
     margin-left: 1px;
+    margin-top: -8px;
 }
 
 .bq_line dd.expression a {

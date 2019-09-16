@@ -14,10 +14,10 @@
             @if(Agent::isDesktop())
             <div class="input_ok">
                 <div class="function" style="position:relative;">
-                    <div id="biaoqing">
+                    <div id="biaoqing" style="display: block;">
                         <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
-                        <div class="bq_line" style="background-color: #fff; height: 135px">
-                            <dl>
+                        <div class="bq_line">
+                            <dl style="margin-bottom: 0;">
                                 <dd class="expression"><a href="javascript:;" title="微笑"><img src="/img/bq/wx.gif"></a></dd>
                                 <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
                                 <dd class="expression"><a href="javascript:;" title="心花怒放"><img src="/img/bq/xhnf.gif"></a></dd>
@@ -41,44 +41,8 @@
                             </dl>
                         </div>
                     </div>
-                    <div id="gn_photo">
-                        <div class="gn_photo_line">
-                            <div id="function_close"><a href="javascript:;" title="关闭" id="ph_close"></a></div>
-                            <dl>
-                                <dd class="tips">上传本地图片不能超过2M</dd>
-                                <dd class="upload"><a href="javascript:;" title="上传图片">上传图片</a><input name="Filedata" type="file" id="upp"></dd>
-                                <dd class="link"><a href="javascript:;" title="图片链接" id="show_url">图片链接</a></dd>
-                            </dl>
-                        </div>
-                        <div id="gn_photo_2">
-                            <div id="function_close"><a href="javascript:;" title="关闭" id="url_close"></a></div>
-                            <div class="gn_photo_link">
-                                <dl>
-                                    <dd class="p_input"><input  type="text" class="photo_input" id="photo_url"></dd>
-                                    <dd class="p_submit"><input name="photo_submit" type="button" class="photo_submit" value="确定">
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div id="gn_photo_3">
-                            <div id="function_close"><a href="javascript:;" title="关闭" class="pic_close"></a></div>
-                            <div class="gn_photo_img"><img class="shopimg" src=""></div>
-                        </div>
-                        <div id="gn_photo_4">
-                            <div id="function_close"><a id="del_close" href="javascript:;" title="关闭"></a></div>
-                            <div class="gn_photo_img">
-                                <dl>
-                                    <dd class="tips2">确定删除吗？</dd>
-                                    <dd class="submit2">
-                                        <a href="javascript:;" title="确定" id="ajax_del">确定</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <dl>
+                    <dl >
                         <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"></a></dd>
-                        <dd class="img"><a href="javascript:;" title="添加图片" id="show_ph"></a></dd>
                     </dl>
                 </div>
                 <div class="input_submit">
@@ -89,12 +53,11 @@
                 </div>
             </div>
             @else
-{{--                <div class="">--}}
                     <div class="function" style="position:relative;">
                         <div id="biaoqing">
                             <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
                             <div class="bq_line">
-                                <dl>
+                                <dl style="margin-bottom: 0;">
                                     <dd class="expression"><a href="javascript:;" title="头像"><img src="/img/Avatar_boy_54x54.png"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="心花怒放"><img src="/img/bq/xhnf.gif"></a></dd>
