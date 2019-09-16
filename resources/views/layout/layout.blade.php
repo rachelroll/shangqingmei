@@ -192,9 +192,7 @@
 
 <!-- Salesfusion -->
 <script type="text/javascript" language="JavaScript" src="https://www.msgapp.com/js/frs-app.js"></script>
-<script type="text/javascript">
-    frt(95993);
-</script>
+
 @yield('script')
 <!-- End Salesfusion -->
 </body>
