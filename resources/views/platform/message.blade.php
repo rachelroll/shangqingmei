@@ -1,4 +1,3 @@
-
 {{--                互动留言--}}
 <br>
 <br>
@@ -17,7 +16,7 @@
                 <div class="function" style="position:relative;">
                     <div id="biaoqing">
                         <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
-                        <div class="bq_line">
+                        <div class="bq_line" style="background-color: #fff; height: 135px">
                             <dl>
                                 <dd class="expression"><a href="javascript:;" title="微笑"><img src="/img/bq/wx.gif"></a></dd>
                                 <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
@@ -96,7 +95,7 @@
                             <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
                             <div class="bq_line">
                                 <dl>
-                                    <dd class="expression"><a href="javascript:;" title="微笑"><img src="/img/bq/wx.gif"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="头像"><img src="/img/Avatar_boy_54x54.png"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="心花怒放"><img src="/img/bq/xhnf.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="鼓掌"><img src="/img/bq/gz.gif"></a></dd>
@@ -162,7 +161,7 @@
                     <div style="clear:both"></div>
                 <br>
                     <div class="row justify-content-between" style="margin-left: 0">
-                        <div class="input_name col">
+                        <div class="input_name col" style="background-image: none">
                             <input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
                         </div>
                         <div class="input_submit col align-self-end">
