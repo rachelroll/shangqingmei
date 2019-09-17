@@ -37,6 +37,9 @@
         text-decoration: none;
     }
 
+    ul li a {
+        color: #333;
+    }
 
     div.scrollmenu {
         background-color: #333;

@@ -1,4 +1,11 @@
 {{--                互动留言--}}
+<style>
+    .bq_line dd.expression {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+</style>
+
 <br>
 <br>
 
