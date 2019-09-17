@@ -170,44 +170,44 @@
                             </dl>
                         </div>
                     </div>
-                    <div id="gn_photo">
-                        <div class="gn_photo_line">
-                            <div id="function_close"><a href="javascript:;" title="关闭" id="ph_close"></a></div>
-                            <dl>
-                                <dd class="tips">上传本地图片不能超过2M</dd>
-                                <dd class="upload"><a href="javascript:;" title="上传图片">上传图片</a></dd>
-                                <dd class="link"><a href="javascript:;" title="图片链接" id="show_url">图片链接</a></dd>
-                            </dl>
-                        </div>
-                        <div id="gn_photo_2">
-                            <div id="function_close"><a href="javascript:;" title="关闭" id="url_close"></a></div>
-                            <div class="gn_photo_link">
-                                <dl>
-                                    <dd class="p_input"><input  type="text" class="photo_input" id="photo_url"></dd>
-                                    <dd class="p_submit"><input name="photo_submit" type="button" class="photo_submit" value="确定">
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div id="gn_photo_4">
-                            <div id="function_close"><a id="del_close" href="javascript:;" title="关闭"></a></div>
-                            <div class="gn_photo_img">
-                                <dl>
-                                    <dd class="tips2">确定删除吗？</dd>
-                                    <dd class="submit2"><a href="javascript:;" title="确定" id="ajax_del">确定</a></dd>
-                                </dl>
-                            </div>
-                        </div>
+{{--                    <div id="gn_photo">--}}
+{{--                        <div class="gn_photo_line">--}}
+{{--                            <div id="function_close"><a href="javascript:;" title="关闭" id="ph_close"></a></div>--}}
+{{--                            <dl>--}}
+{{--                                <dd class="tips">上传本地图片不能超过2M</dd>--}}
+{{--                                <dd class="upload"><a href="javascript:;" title="上传图片">上传图片</a></dd>--}}
+{{--                                <dd class="link"><a href="javascript:;" title="图片链接" id="show_url">图片链接</a></dd>--}}
+{{--                            </dl>--}}
+{{--                        </div>--}}
+{{--                        <div id="gn_photo_2">--}}
+{{--                            <div id="function_close"><a href="javascript:;" title="关闭" id="url_close"></a></div>--}}
+{{--                            <div class="gn_photo_link">--}}
+{{--                                <dl>--}}
+{{--                                    <dd class="p_input"><input  type="text" class="photo_input" id="photo_url"></dd>--}}
+{{--                                    <dd class="p_submit"><input name="photo_submit" type="button" class="photo_submit" value="确定">--}}
+{{--                                    </dd>--}}
+{{--                                </dl>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div id="gn_photo_4">--}}
+{{--                            <div id="function_close"><a id="del_close" href="javascript:;" title="关闭"></a></div>--}}
+{{--                            <div class="gn_photo_img">--}}
+{{--                                <dl>--}}
+{{--                                    <dd class="tips2">确定删除吗？</dd>--}}
+{{--                                    <dd class="submit2"><a href="javascript:;" title="确定" id="ajax_del">确定</a></dd>--}}
+{{--                                </dl>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                     <dl style="width:100px;">
                         <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"><img src="images/six/m/bq.png" width="22" height="22" /></a></dd>
 
-                        <div style="overflow:hidden;position:relative;">
-                            <div style="opacity:0;display: block; height: 22px;  width: 22px;  position: absolute;z-index: 2;overflow:hidden;">
-                                <input  style="display: block; background: transparent; width: 22px; height:22px; " accept="image/jpeg,image/png,image/gif,image/bmp" id="myimg" name="Filedata" type="file" >
-                            </div>
-                            <dd style="position:relative;z-index: 1;" class="upimg"><a href="javascript:;"  title="上传图片"><img src="images/six/m/img.png" width="22" height="22" /></a></dd>
-                        </div>
+{{--                        <div style="overflow:hidden;position:relative;">--}}
+{{--                            <div style="opacity:0;display: block; height: 22px;  width: 22px;  position: absolute;z-index: 2;overflow:hidden;">--}}
+{{--                                <input  style="display: block; background: transparent; width: 22px; height:22px; " accept="image/jpeg,image/png,image/gif,image/bmp" id="myimg" name="Filedata" type="file" >--}}
+{{--                            </div>--}}
+{{--                            <dd style="position:relative;z-index: 1;" class="upimg"><a href="javascript:;"  title="上传图片"><img src="images/six/m/img.png" width="22" height="22" /></a></dd>--}}
+{{--                        </div>--}}
                         <div style="position:relative;margin-left:42px;">
                             <div id="gn_photo_3">
                                 <div id="function_close"><a href="javascript:;" title="关闭" class="pic_close"></a></div>
@@ -233,7 +233,8 @@
             <a href="m.php-so=Suri_dreamer.html">
                 <div class="list_user_zdy"></div>
                 <div class="list_user_z">
-                    <img src="images/six/user_03.jpg" width=36 height=36 />                </div>
+                    <img src="images/six/user_03.jpg" width=36 height=36 />
+                </div>
                 <div class="qun">
                     <dl>
                         <dd class="qun1">Suri_dreamer</dd>
