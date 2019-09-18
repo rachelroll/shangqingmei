@@ -36,6 +36,7 @@ set('writable_dirs', ['bootstrap/cache']);
 host('www.yixiangjian.com')
     ->user('deployer')
     ->set('writable_use_sudo', true)
+    ->identityFile('~/.ssh/deployerkey')
     ->set('deploy_path', '/var/www/{{application}}')
     ->stage('staging');
 

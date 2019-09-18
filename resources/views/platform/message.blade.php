@@ -1,10 +1,10 @@
 {{--                互动留言--}}
-<style>
-    .bq_line dd.expression {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-</style>
+{{--<style>--}}
+{{--    .bq_line dd.expression {--}}
+{{--        margin-bottom: 0;--}}
+{{--        margin-top: 0;--}}
+{{--    }--}}
+{{--</style>--}}
 
 <br>
 <br>
@@ -65,7 +65,7 @@
                             <div id="function_close"><a href="javascript:;" id="bq_close" title="关闭"></a></div>
                             <div class="bq_line">
                                 <dl style="margin-bottom: 0;">
-                                    <dd class="expression"><a href="javascript:;" title="头像"><img src="/img/Avatar_boy_54x54.png"></a></dd>
+                                    <dd class="expression"><a href="javascript:;" title="微笑"><img src="/img/bq/wx.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="晕"><img src="/img/bq/y.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="心花怒放"><img src="/img/bq/xhnf.gif"></a></dd>
                                     <dd class="expression"><a href="javascript:;" title="鼓掌"><img src="/img/bq/gz.gif"></a></dd>
@@ -125,7 +125,7 @@
                         </div>
                         <dl>
                             <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"></a></dd>
-                            <dd class="img"><a href="javascript:;" title="添加图片" id="show_ph"></a></dd>
+{{--                            <dd class="img"><a href="javascript:;" title="添加图片" id="show_ph"></a></dd>--}}
                         </dl>
                     </div>
                     <div style="clear:both"></div>
