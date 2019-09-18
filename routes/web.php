@@ -13,6 +13,7 @@
 
 // 首页
 Route::get('/', 'AboutController@home')->name('web.home');
+Route::get('/test', 'TestController@index')->name('web.test');
 
 // 关于我们
 Route::get('/about', 'AboutController@index')->name('web.about');

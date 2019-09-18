@@ -23,8 +23,61 @@ class PlatformController extends Controller
     {
         $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
 
         return view('platform.brand_consult', compact('messages', 'projects'));
+    }
+
+    private function handleGif($string)
+    {
+        $patterns = [
+            '/\[微笑\]/',
+            '/\[晕\]/',
+            '/\[心花怒放\]/',
+            '/\[鼓掌\]/',
+            '/\[哈欠\]/',
+            '/\[憨笑\]/',
+            '/\[汗\]/',
+            '/\[吃惊\]/',
+            '/\[鄙视\]/',
+            '/\[闭嘴\]/',
+            '/\[呲牙\]/',
+            '/\[害羞\]/',
+            '/\[衰\]/',
+            '/\[偷笑\]/',
+            '/\[折磨\]/',
+            '/\[难过\]/',
+            '/\[示爱\]/',
+            '/\[可爱\]/',
+            '/\[泪\]/',
+            '/\[酷\]/',
+        ];
+        $replacements = [
+            '<img src="/img/bq/wx.gif">',
+            '<img src="/img/bq/y.gif">',
+            '<img src="/img/bq/xhnf.gif">',
+            '<img src="/img/bq/gz.gif">',
+            '<img src="/img/bq/hax.gif">',
+            '<img src="/img/bq/sx.gif">',
+            '<img src="/img/bq/han.gif">',
+            '<img src="/img/bq/cj.gif">',
+            '<img src="/img/bq/bs.gif">',
+            '<img src="/img/bq/bz.gif">',
+            '<img src="/img/bq/cy.gif">',
+            '<img src="/img/bq/hx.gif">',
+            '<img src="/img/bq/shuai.gif">',
+            '<img src="/img/bq/tx.gif">',
+            '<img src="/img/bq/zm.gif">',
+            '<img src="/img/bq/ng.gif">',
+            '<img src="/img/bq/sa.gif">',
+            '<img src="/img/bq/ka.gif">',
+            '<img src="/img/bq/lei.gif">',
+            '<img src="/img/bq/cool.gif">',
+        ];
+        return  preg_replace($patterns, $replacements, $string);
     }
 
     // 品牌问题存储
