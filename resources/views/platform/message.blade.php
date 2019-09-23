@@ -3,6 +3,9 @@
     textarea {
         border: none;
     }
+    .name {
+        border: none;
+    }
 </style>
 
 <br>
