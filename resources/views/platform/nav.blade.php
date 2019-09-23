@@ -77,7 +77,7 @@
     }
     .swiper-container .swiper-wrapper .swiper-slide {
         /*border: 1px solid red;*/
-        text-align: center;
+        text-align: left;
         padding: 6px 0;
     }
     .child {
@@ -96,8 +96,9 @@
         border-bottom: solid 1px #8a8a8a;
 
     }
-    .parent {
-        font-size: 16px;
+    .parent span {
+        font-size: 18px;
+        font-weight: bold;
         color: #333;
     }
     .red {

@@ -132,7 +132,14 @@ class PlatformController extends Controller
 
         $lists = Chuanqi::get()->groupBy('type');
 
+        for ($i = 1; $i <= count($lists); $i++) {
+            foreach ($lists as &$item) {
+                $item->id = $i;
+            }
+        }
+
         $messages = Message::orderby('id', 'DESC')->get();
+
         return view('platform.chuanqi', compact('chuanqi', 'lists', 'messages', 'projects'));
     }
 }
