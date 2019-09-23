@@ -223,8 +223,8 @@
         $(function() {
             $('.parent').on('click',function(e) {
                 // e.preventDefault();
-                $('.parent').removeClass('red');
-                $(this).addClass('red');
+                $('.parent').children().removeClass('red');
+                $(this).children().addClass('red');
                 var id = $(this).attr('data');
                 $('.child').not('#'+id).hide();
                 $('#'+id).toggle(400);
