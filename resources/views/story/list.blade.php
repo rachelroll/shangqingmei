@@ -83,15 +83,15 @@
                             <div class="mask" style="display: none"></div>
                         </div>
                     @else
-                        <a href="{{ route('web.story.show', ['id' => $list->id]) }}">
-                            <div class="col-12 block" style="padding: 0" id="{{ $list->id }}">
+                        <div class="col-12 block" style="padding: 0" id="{{ $list->id }}">
+                            <a href="{{ route('web.story.show', ['id' => $list->id]) }}">
                                 <div style="padding: 0 20px">
                                     <p class="big-font">{{ $list->client_name }}</p>
                                     <p class="small-font">{{ $list->sub_category }}</p>
                                 </div>
-                                <div class="mask" style="display: none"></div>
-                            </div>
-                        </a>
+                            </a>
+                            <div class="mask" style="display: none"></div>
+                        </div>
                     @endif
                 @endforeach
                 </div>
