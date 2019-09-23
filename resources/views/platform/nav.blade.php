@@ -102,8 +102,6 @@
         color: #333;
     }
     .red {
-        /*color: red;*/
-        /*border-bottom: 1px solid #bd0202;*/
         background-image: url(../img/red-back.png);
     }
 
@@ -166,25 +164,30 @@
     </div>
     <ul class="child" id=1>
         <li>
-            <a href="{{ route('web.platform.update-case') }}" style="color: #333">
+            <a href="{{ route('web.platform.brand-consult') }}" style="color: #333">
                 品牌问题咨询
             </a>
         </li>
         <li>
-            <a href="{{ route('web.platform.update-case') }}" style="color: #333">
+            <a href="{{ route('web.platform.visual-clinic') }}" style="color: #333">
                 视觉形象诊断
             </a>
         </li>
     </ul>
     <ul class="child" id=2>
         <li>
-            <a href="{{ route('web.platform.update-case') }}" style="color: #333">
-                品牌问题咨询
+            <a href="{{ route('web.platform.linian') }}" style="color: #333">
+                CI 理念的厘清
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('web.platform.transform-case') }}" style="color: #333">
+                形象过度案例
             </a>
         </li>
         <li>
             <a href="{{ route('web.platform.update-case') }}" style="color: #333">
-                视觉形象诊断
+                形象更新案例
             </a>
         </li>
     </ul>

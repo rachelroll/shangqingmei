@@ -84,7 +84,7 @@
         /*top: 100px;*/
         width: 100%;
         font-weight: normal;
-        padding: 10px;
+        /*padding: 10px;*/
         font-size: 18px;
         color: #666;
     }
@@ -96,10 +96,6 @@
     .parent {
         font-size: 20px;
         color: #333;
-    }
-    .red {
-        /*color: red;*/
-        border-bottom: 8px solid #bd0202;
     }
 
     .show {
