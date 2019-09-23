@@ -120,7 +120,7 @@ img {
 
 .input {
     height: 90px;
-    border: 1px solid #FFF;
+    /*border: 1px solid #FFF;*/
     font-family: "微软雅黑";
     font-size: 14px;
     line-height: 23px;
