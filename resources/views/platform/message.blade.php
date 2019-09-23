@@ -152,7 +152,7 @@
             <span style="position: absolute; left: 60px; bottom: 20%">{{ $message->username }}</span>
         </div>
         <div class="card-body">
-            <p class="card-text">{{ $message->content }}</p>
+            <p class="card-text">{!! $message->content !!}</p>
             <br>
             <p class="card-text ip-info">来自{{ $message->from }} | {{ $message->device }} | {{ $message->id }}楼 | {{ $message->created_at }}</p>
         </div>
