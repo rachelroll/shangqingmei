@@ -26,7 +26,7 @@
 </style>
 @extends('layout/layout')
 @section('content')
-    <div class="full-main-container white-bg full-main-container-margin">
+    <div class="main-container">
         <div class="title">
             <div class="big">
                 服务能力
@@ -36,6 +36,8 @@
                 基于理解、连接和帮助他人的驱动力，以及深入倾听、参与和探索不同视角和经验的能力。
             </div>
         </div>
+    </div>
+    <div class="full-main-container white-bg full-main-container-margin">
         <div class=" remove-top-padding wrap-content">
             <a class="down-cta">
                 <img class="arrow main-arrow" src="../wp-content/themes/interbrand/img/m-arr1.svg" />
@@ -46,7 +48,7 @@
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.service.show', ['id' => 1]) }}">
                     <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_1st.jpg'); color: #ffffff; text-align: center  ">
-                        <div class="content-textbox " style="color: #ffffff; text-align: center">
+                        <div class="content-textbox " style="color: #ffffff; text-align: center;">
                             <h1>作业八法</h1>
                             <br/>
                             <p>

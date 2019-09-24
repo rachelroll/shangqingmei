@@ -10,7 +10,7 @@
         <div class="row hero-row image-row">
             <div class="hero-container image-container" style="background-image: url( '../../wp-content/uploads/2016/09/mini-hero.jpg' );">
                 <div class="overlay-hero">
-                    <div class="overlay-hero-title ">
+                    <div class="overlay-hero-title overlay-text">
                         <h3 class="text-medium">作业八法</h3>
                         <h1 class="text-huge ">独具特色的尚清美八法</h1>
                     </div>

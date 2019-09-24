@@ -145,9 +145,9 @@
                                 <div class="parent" data="{{ $key }}">
                                     @if($key == 1)
                                         <span>VI / CI 设计</span>
-                                        @else
-                                    <span>行业经验</span>
-                                        @endif
+                                    @else
+                                        <span>行业经验</span>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach
@@ -155,7 +155,7 @@
                     @foreach($nav as $key=>$list)
                         <ul class="child" id="{{$key}}">
                             @foreach($list as $item)
-                                <li >
+                                <li>
                                     <a href="{{ route('web.story.show', ['id' => $item['id']]) }}" style="color: #333">
                                         {{ $item['client_name'] }}
                                     </a>
@@ -191,7 +191,6 @@
                             </div>
                         </div>
                         <br>
-
                         {!! $story->background !!}
                     </div>
                     <br>
@@ -230,7 +229,7 @@
                 $('#'+id).toggle(400);
                 // $(this).parent().siblings().children('.child').hide();
                 // $(this).siblings().toggle(400)
-            })
-        })
+            });
+        });
     </script>
 @endsection
