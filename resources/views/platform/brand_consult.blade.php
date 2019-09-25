@@ -1,7 +1,7 @@
 @extends('layout/layout')
 @section('css')
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/public-cdn/bootstrap/4.3/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
 @endsection
 
 @section('style')
@@ -11,6 +11,126 @@
             padding: 32px;
             margin-right: 30px;
         }
+         .image-text .text-huge {
+             margin-top: 80px;
+         }
+
+        .wrap-iconic-case .text-image-row div.single-image {
+            background-color: #ddd;
+            padding: 32px;
+            margin-right: 30px;
+        }
+
+        .wrap-iconic-case .text-image-row div.single-image h1 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .wrap-iconic-case .text-image-row div.single-image ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .images-row {
+            margin: 20px 0;
+        }
+
+        ul.nav {
+            background-color: #333;
+            overflow: auto;
+            /*white-space: nowrap;*/
+        }
+
+        li.nav-item {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        ul li a {
+            color: #333;
+        }
+
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu div {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu div:hover {
+            background-color: #777;
+        }
+        /* clear float */
+        .clear:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
+
+        .clear {
+            zoom: 1
+
+        }
+        .red {
+            background-image: url(../img/red-back.png);
+        }
+
+
+        .horizontal-container {
+            margin: 0 auto;
+            background-color: #f4ffe3;
+            width: 100%;
+            position: relative;
+            border: 1px solid #e0ebcf;
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-wrapper{
+            margin: 0 auto;
+            /* overflow: hidden; */
+            border-radius: 5px;
+            overflow-x: auto;
+            -webkit-backface-visibility: hidden;
+            -webkit-overflow-scrolling: touch; /* 2 */
+        }
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .scroll-item {
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .dropdown {
+            display: none;
+            width: 100%;
+            padding: 0 10px;
+            font-weight: normal;
+            font-size: 16px;
+            color: #666;
+        }
+        .dropdown li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+        }
+
     </style>
 @stop
 
@@ -34,30 +154,30 @@
                                 <legend class="col-form-label col-sm-3 pt-0">您需要的品牌服务是:</legend>
                                 <div class="col-sm-9">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="service" id="gridRadios11"
+                                        <input class="form-check-input" type="radio" name="service" id="service1"
                                                value="规划" checked>
-                                        <label class="form-check-label" for="gridRadios11">
+                                        <label class="form-check-label" for="service1">
                                             规划
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="service" id="gridRadios2"
+                                        <input class="form-check-input" type="radio" name="service" id="service2"
                                                value="建立">
-                                        <label class="form-check-label" for="gridRadios2">
+                                        <label class="form-check-label" for="service2">
                                             建立
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="service" id="gridRadios3"
+                                        <input class="form-check-input" type="radio" name="service" id="service3"
                                                value="管理">
-                                        <label class="form-check-label" for="gridRadios3">
+                                        <label class="form-check-label" for="service3">
                                             管理
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="service" id="gridRadios3"
+                                        <input class="form-check-input" type="radio" name="service" id="service4"
                                                value="评估">
-                                        <label class="form-check-label" for="gridRadios3">
+                                        <label class="form-check-label" for="service4">
                                             评估
                                         </label>
                                     </div>
@@ -73,64 +193,64 @@
                                 <div class="col-sm-9">
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios12" value="品牌战略规划与调整" checked>
-                                        <label class="form-check-label" for="gridRadios12">
+                                               name="type[]" id="type1" value="品牌战略规划与调整" checked>
+                                        <label class="form-check-label" for="type1">
                                             品牌战略规划与调整
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios2" value="品牌更新">
-                                        <label class="form-check-label" for="gridRadios2">
+                                               name="type[]" id="type2" value="品牌更新">
+                                        <label class="form-check-label" for="type2">
                                             品牌更新
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="新设立或更名的公司建立品牌">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type3" value="新设立或更名的公司建立品牌">
+                                        <label class="form-check-label" for="type3">
                                             新设立或更名的公司建立品牌
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="新成立企业集团的品牌规划">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type4" value="新成立企业集团的品牌规划">
+                                        <label class="form-check-label" for="type4">
                                             新成立企业集团的品牌规划
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="企业集团重组的品牌整合">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type5" value="企业集团重组的品牌整合">
+                                        <label class="form-check-label" for="type5">
                                             企业集团重组的品牌整合
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="集团内关系企业、旗下品牌的品牌规划">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type6" value="集团内关系企业、旗下品牌的品牌规划">
+                                        <label class="form-check-label" for="type6">
                                             集团内关系企业、旗下品牌的品牌规划
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="告别旧形象、建立新形象">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type7" value="告别旧形象、建立新形象">
+                                        <label class="form-check-label" for="type7">
                                             告别旧形象、建立新形象
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="继承、修正旧识别，向新形象过渡">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type8" value="继承、修正旧识别，向新形象过渡">
+                                        <label class="form-check-label" for="type8">
                                             继承、修正旧识别，向新形象过渡
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                               name="type[]" id="gridRadios3" value="团体、机构与商业项目的品牌化">
-                                        <label class="form-check-label" for="gridRadios3">
+                                               name="type[]" id="type9" value="团体、机构与商业项目的品牌化">
+                                        <label class="form-check-label" for="type9">
                                             团体、机构与商业项目的品牌化
                                         </label>
                                     </div>
@@ -145,57 +265,57 @@
                             <div class="col-sm-9">
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck1" name="problems[]" value="理念、行为、视觉三者的主次关系" checked>
-                                    <label class="form-check-label" for="gridCheck1">
+                                           id="problems1" name="problems[]" value="理念、行为、视觉三者的主次关系" checked>
+                                    <label class="form-check-label" for="problems1">
                                         理念、行为、视觉三者的主次关系
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck2" name="problems[]" value="CI 导入的时机">
-                                    <label class="form-check-label" for="gridCheck2">
+                                           id="problems2" name="problems[]" value="CI 导入的时机">
+                                    <label class="form-check-label" for="problems2">
                                         CI 导入的时机
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck3" name="problems[]" value="CI 导入与企业管理、运营的协调">
-                                    <label class="form-check-label" for="gridCheck3">
+                                           id="problems3" name="problems[]" value="CI 导入与企业管理、运营的协调">
+                                    <label class="form-check-label" for="problems3">
                                         CI 导入与企业管理、运营的协调
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck4" name="problems[]" value="CI 导入的周期">
-                                    <label class="form-check-label" for="gridCheck4">
+                                           id="problems4" name="problems[]" value="CI 导入的周期">
+                                    <label class="form-check-label" for="problems4">
                                         CI 导入的周期
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck5" name="problems[]" value="VI 设计的内容和费用">
-                                    <label class="form-check-label" for="gridCheck5">
+                                           id="problems5" name="problems[]" value="VI 设计的内容和费用">
+                                    <label class="form-check-label" for="problems5">
                                         VI 设计的内容和费用
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck6" name="problems[]" value="标志要不要征集">
-                                    <label class="form-check-label" for="gridCheck6">
+                                           id="problems6" name="problems[]" value="标志要不要征集">
+                                    <label class="form-check-label" for="problems6">
                                         标志要不要征集
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck7" name="problems[]" value="如何选定标志方案">
-                                    <label class="form-check-label" for="gridCheck7">
+                                           id="problems7" name="problems[]" value="如何选定标志方案">
+                                    <label class="form-check-label" for="problems7">
                                         如何选定标志方案
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" style="margin-left: -20px" type="checkbox"
-                                           id="gridCheck8" name="problems[]" value="标志怎样避免与人雷同或抄袭">
-                                    <label class="form-check-label" for="gridCheck8">
+                                           id="problems8" name="problems[]" value="标志怎样避免与人雷同或抄袭">
+                                    <label class="form-check-label" for="problems8">
                                         标志怎样避免与人雷同或抄袭
                                     </label>
                                 </div>
@@ -205,23 +325,23 @@
                             <legend class="col-form-label col-sm-3 pt-0">您接触品牌理念多久了:</legend>
                             <div class="col-sm-9">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="time" id="gridRadios1a"
+                                    <input class="form-check-input" type="radio" name="time" id="time1"
                                            value="一年不到" checked>
-                                    <label class="form-check-label" for="gridRadios1a">
+                                    <label class="form-check-label" for="time1">
                                         一年不到
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="time" id="gridRadios2"
+                                    <input class="form-check-input" type="radio" name="time" id="time2"
                                            value="一年">
-                                    <label class="form-check-label" for="gridRadios2">
+                                    <label class="form-check-label" for="time2">
                                         一年
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="time" id="gridRadios3"
+                                    <input class="form-check-input" type="radio" name="time" id="time3"
                                            value="两年以上">
-                                    <label class="form-check-label" for="gridRadios3">
+                                    <label class="form-check-label" for="time3">
                                         两年以上
                                     </label>
                                 </div>
@@ -231,46 +351,46 @@
                             <legend class="col-form-label col-sm-3 pt-0">您接触、了解品牌是因为:</legend>
                             <div class="col-sm-9">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="reason" id="gridRadios1"
+                                    <input class="form-check-input" type="radio" name="reason" id="reason1"
                                            value="兴趣" checked>
-                                    <label class="form-check-label" for="gridRadios1">
+                                    <label class="form-check-label" for="reason1">
                                         兴趣
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="reason" id="gridRadios2"
+                                    <input class="form-check-input" type="radio" name="reason" id="reason2"
                                            value="学业">
-                                    <label class="form-check-label" for="gridRadios2">
+                                    <label class="form-check-label" for="reason2">
                                         学业
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="reason" id="gridRadios3"
+                                    <input class="form-check-input" type="radio" name="reason" id="reason3"
                                            value="研究">
-                                    <label class="form-check-label" for="gridRadios3">
+                                    <label class="form-check-label" for="reason3">
                                         研究
                                     </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="reason" id="gridRadios3"
+                                    <input class="form-check-input" type="radio" name="reason" id="reason4"
                                            value="为企业服务">
-                                    <label class="form-check-label" for="gridRadios3">
+                                    <label class="form-check-label" for="reason4">
                                         为企业服务
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-3 col-form-label">备注和问题: </label>
+                            <label for="marks1" class="col-sm-3 col-form-label">备注和问题: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="marks" class="form-control" id="inputEmail3"
+                                <input type="text" name="marks" class="form-control" id="marks1"
                                        placeholder="填写备注和问题">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-3 col-form-label">您的姓名: </label>
+                            <label for="marks2" class="col-sm-3 col-form-label">您的姓名: </label>
                             <div class="col-sm-9">
-                                <input type="text" name="name" class="form-control" id="inputEmail3" placeholder="填写姓名">
+                                <input type="text" name="name" class="form-control" id="marks2" placeholder="填写姓名">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -281,9 +401,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-3 col-form-label">您的 E-mail: </label>
+                            <label for="marks3" class="col-sm-3 col-form-label">您的 E-mail: </label>
                             <div class="col-sm-9">
-                                <input type="email" name="email" class="form-control" id="inputEmail3"
+                                <input type="email" name="email" class="form-control" id="marks3"
                                        placeholder="填写邮箱">
                             </div>
                         </div>
@@ -300,6 +420,57 @@
         </div>
     </div>
 @endsection
+
+@section('script')
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
+    <script>
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+
+        }
+        $(function() {
+            $('.scroll-item').on('click',function(e) {
+                // e.preventDefault();
+                $('.scroll-item').removeClass('text-danger');
+                $(this).addClass('text-danger');
+                var id = $(this).attr('data');
+                $('.dropdown').not('#'+id).hide();
+                $('#'+id).toggle(200);
+            })
+        })
+    </script>
+    @endsection
+
+{{--@section('script')--}}
+{{--    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>--}}
+{{--    <script>--}}
+{{--        var swiper = new Swiper('.swiper-container', {--}}
+{{--            slidesPerView: 4,--}}
+{{--            spaceBetween: 10,--}}
+{{--            pagination: {--}}
+{{--                el: '.swiper-pagination',--}}
+{{--                type: 'fraction',--}}
+{{--            },--}}
+{{--        });--}}
+{{--        $(function() {--}}
+{{--            $('.parent').on('click',function(e) {--}}
+{{--                // e.preventDefault();--}}
+{{--                $('.parent').children().removeClass('red');--}}
+{{--                $(this).children().addClass('red');--}}
+{{--                var id = $(this).attr('data');--}}
+{{--                $('.child').not('#'+id).hide();--}}
+{{--                $('#'+id).toggle(400);--}}
+{{--                // $(this).parent().siblings().children('.child').hide();--}}
+{{--                // $(this).siblings().toggle(400)--}}
+{{--            })--}}
+{{--        })--}}
+{{--    </script>--}}
+{{--@endsection--}}
 
 
 
