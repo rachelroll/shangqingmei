@@ -103,7 +103,6 @@
 </script>
 
 <!-- Salesfusion -->
-{{--<script type="text/javascript" language="JavaScript" src="https://www.msgapp.com/js/frs-app.js"></script>--}}
 
 @yield('script')
 <!-- End Salesfusion -->
