@@ -83,53 +83,7 @@
             zoom: 1
 
         }
-        .red {
-            background-image: url(../img/red-back.png);
-        }
 
-
-        .horizontal-container {
-            margin: 0 auto;
-            background-color: #f4ffe3;
-            width: 100%;
-            position: relative;
-            border: 1px solid #e0ebcf;
-        }
-        .scroll-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-        .scroll-wrapper{
-            margin: 0 auto;
-            /* overflow: hidden; */
-            border-radius: 5px;
-            overflow-x: auto;
-            -webkit-backface-visibility: hidden;
-            -webkit-overflow-scrolling: touch; /* 2 */
-        }
-        .scroll-content {
-            display: inline-block;
-            white-space: nowrap;
-        }
-        .scroll-item {
-            height: 48px;
-            font-size: 24px;
-            line-height: 48px;
-            display: inline-block;
-            padding: 0 10px;
-        }
-
-        .dropdown {
-            display: none;
-            width: 100%;
-            padding: 0 10px;
-            font-weight: normal;
-            font-size: 16px;
-            color: #666;
-        }
-        .dropdown li {
-            line-height: 60px;
-            border-bottom: solid 1px #8a8a8a;
-        }
 
     </style>
 @stop
@@ -431,8 +385,8 @@
                 scrollY: false,
                 click: true,
             })
-
         }
+        
         $(function() {
             $('.scroll-item').on('click',function(e) {
                 // e.preventDefault();
@@ -446,31 +400,6 @@
     </script>
     @endsection
 
-{{--@section('script')--}}
-{{--    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>--}}
-{{--    <script>--}}
-{{--        var swiper = new Swiper('.swiper-container', {--}}
-{{--            slidesPerView: 4,--}}
-{{--            spaceBetween: 10,--}}
-{{--            pagination: {--}}
-{{--                el: '.swiper-pagination',--}}
-{{--                type: 'fraction',--}}
-{{--            },--}}
-{{--        });--}}
-{{--        $(function() {--}}
-{{--            $('.parent').on('click',function(e) {--}}
-{{--                // e.preventDefault();--}}
-{{--                $('.parent').children().removeClass('red');--}}
-{{--                $(this).children().addClass('red');--}}
-{{--                var id = $(this).attr('data');--}}
-{{--                $('.child').not('#'+id).hide();--}}
-{{--                $('#'+id).toggle(400);--}}
-{{--                // $(this).parent().siblings().children('.child').hide();--}}
-{{--                // $(this).siblings().toggle(400)--}}
-{{--            })--}}
-{{--        })--}}
-{{--    </script>--}}
-{{--@endsection--}}
 
 
 
