@@ -1,6 +1,6 @@
 <style>
     .main-footer.m-footer a {
-        margin: 6px 30px 0 0;
+        /*margin: 6px 30px 0 0;*/
         color: #fff;
     }
 </style>

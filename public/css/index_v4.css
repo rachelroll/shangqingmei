@@ -1946,5 +1946,13 @@ img {
         margin-right: auto;
         margin-left: auto;
     }
+}
 
+div.bq a {
+    display: block;
+    text-decoration: none;
+    height: 34px;
+    width: 34px;
+    margin-right: 58px;
+    margin-top: 5px;
 }

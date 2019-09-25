@@ -58,6 +58,10 @@
             background: none !important;
             padding: 0 !important;
         }
+
+        body {
+            font-family: "STXihei";
+        }
     </style>
 
     <style> #mainNav.show .nav-toggle .hamburger .line2, #mainNav.show .nav-toggle .hamburger .line3 {

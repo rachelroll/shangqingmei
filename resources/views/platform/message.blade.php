@@ -125,22 +125,26 @@
                             </div>
                         </div>
                     </div>
-                    <dl>
-                        <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"></a></dd>
+{{--                    <dl>--}}
+{{--                        <dd class="bq"><a href="javascript:;" id="show_bq" title="加入表情"></a></dd>--}}
 {{--                        <dd class="img"><a href="javascript:;" title="添加图片" id="show_ph"></a></dd>--}}
-                    </dl>
+{{--                    </dl>--}}
                 </div>
                 <div style="clear:both"></div>
                 <br>
                     <div class="row justify-content-between" style="margin-left: 0">
+                        <div class="bq">
+                            <a href="javascript:;" id="show_bq" title="加入表情">
+                                <img src="../img/bq.png" alt="" style="width: 34px; height: 34px"/>
+                            </a>
+                        </div>
                         <div class="input_name col" style="background-image: none">
                             <input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
                         </div>
-                        <div class="input_submit col align-self-end">
+                        <div class="input_submit col align-self-end" style="margin-bottom: 4px;">
                             <input  type="submit" class="botton" onClick="return checkdata();" value="发 布" />
                         </div>
                     </div>
-
 {{--                </div>--}}
              @endif
         </form>
