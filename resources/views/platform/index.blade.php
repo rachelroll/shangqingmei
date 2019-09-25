@@ -47,7 +47,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.platform.brand-consult') }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_1st.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_1st.jpg'); color: #ffffff; text-align: center; width: 100% ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
                             <h1>
@@ -60,7 +60,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.platform.opinion') }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_2nd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_2nd.jpg'); color: #ffffff; text-align: center; width: 100%  ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
                             <h1>
@@ -73,7 +73,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.platform.chuanqi', ['id' => 1]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_3rd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Interactive_home_3rd.jpg'); color: #ffffff; text-align: center; width: 100%">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <br/>
                             <h1>

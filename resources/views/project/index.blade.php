@@ -47,7 +47,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.project.list', ['id' => 1]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_1st.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_1st.jpg'); color: #ffffff; text-align: center;  width: 100%; ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: A</p>
                             <br/>
@@ -61,7 +61,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.project.list', ['id' => 2]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_2nd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_2nd.jpg'); color: #ffffff; text-align: center; width: 100%; ">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: B</p>
                             <br/>
@@ -75,7 +75,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.project.list', ['id' => 3]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_3rd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/case_home_3rd.jpg'); color: #ffffff; text-align: center; width: 100%;">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: C</p>
                             <br/>

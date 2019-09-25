@@ -47,9 +47,6 @@ class MessageController extends Controller
     public function taobaoIP($clientIP){
         $taobaoIP = 'https://ip.ttt.sh/api.php?ip='.$clientIP;
         $data = file_get_contents($taobaoIP);
-        //$province = $IPinfo->data->region;
-        //$city = $IPinfo->data->city;
-        //$data = $province.$city;
         return $data;
     }
 }

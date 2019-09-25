@@ -47,7 +47,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.service.show', ['id' => 1]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_1st.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_1st.jpg'); color: #ffffff; text-align: center; width: 100%">
                         <div class="content-textbox " style="color: #ffffff; text-align: center;">
                             <h1>作业八法</h1>
                             <br/>
@@ -61,7 +61,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.service.show', ['id' => 3]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_2nd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_2nd.jpg'); color: #ffffff; text-align: center; width: 100%">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <h1>整体作业方案</h1>
                             <br/>
@@ -75,7 +75,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.service.show', ['id' => 2]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_3rd.jpg'); color: #ffffff; text-align: center  ">
+                    <div class="section-content image-bg center-content" style="background-image: url('../img/Ability_home_3rd.jpg'); color: #ffffff; text-align: center; width: 100%">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <h1>业务流程</h1>
                             <br/>
