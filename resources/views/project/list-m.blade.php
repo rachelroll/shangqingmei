@@ -63,7 +63,7 @@
         }
         .swiper-container .swiper-wrapper .swiper-slide {
             /*border: 1px solid red;*/
-            text-align: center;
+            /*text-align: center;*/
             padding: 6px 0;
         }
         .child {
@@ -86,10 +86,6 @@
             font-size: 18px;
             color: #666;
 
-        }
-        .red {
-            /*color: red;*/
-            border-bottom: 8px solid #bd0202;
         }
 
         .show {
@@ -217,9 +213,9 @@
                     <div class="swiper-wrapper ">
                         @foreach($lists as $key=>$list)
                         <div class="swiper-slide" style="width: 70px;">
-                            <div class="parent" data="{{ $key }}">
+                            <span class="parent" data="{{ $key }}">
                                 {{ $list->title }}
-                            </div>
+                            </span>
                         </div>
                         @endforeach
                     </div>

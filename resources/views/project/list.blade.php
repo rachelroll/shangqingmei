@@ -127,8 +127,12 @@
                         </div>
                         <ul>
                             @foreach($list->projects as $item)
-                                <li>- {{ $item->title }}</li>
-                                @endforeach
+                                <li>
+                                    <a href="{{ route('web.project.show', ['id' => $item->id]) }}">
+                                        - {{ $item->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     @endforeach
                 </div>

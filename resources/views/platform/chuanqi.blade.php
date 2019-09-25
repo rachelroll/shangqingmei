@@ -168,16 +168,16 @@
                         <div class="swiper-wrapper">
                             @foreach($lists as $key=>$list)
                                 <div class="swiper-slide" style="width: 70px;">
-                                    <div class="parent" data="{{ $list->id }}">
-                                        <span>{{ $key }}</span>
+                                    <div class="parent" data="{{ $key }}">
+                                        <span>{{ $list->type }}</span>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                         @foreach($lists as $key=>$list)
-                            <ul class="child" id="{{$list->id}}">
+                            <ul class="child" id="{{$key}}">
                                 @foreach($list as $item)
-                                    <li >
+                                    <li>
                                         <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="color: #333">
                                             {{ $item->title }}
                                         </a>

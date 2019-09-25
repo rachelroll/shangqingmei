@@ -26,7 +26,7 @@
 </style>
 @extends('layout/layout')
 @section('content')
-    <div class="full-main-container white-bg full-main-container-margin">
+    <div class="main-container">
         <div class="title">
             <div class="big">
                 作业故事
@@ -36,6 +36,8 @@
                 我们的服务覆盖多个领域，这使我们得以扩充我们的业务量级，素质和专业知识使我们拥有了技术优势。
             </div>
         </div>
+    </div>
+    <div class="full-main-container white-bg full-main-container-margin">
         <div class=" remove-top-padding wrap-content">
             <a class="down-cta">
                 <img class="arrow main-arrow" src="../wp-content/themes/interbrand/img/m-arr1.svg" />

@@ -10,7 +10,7 @@
         <div class="row hero-row image-row">
             <div class="hero-container image-container" style="background-image: url( '../../wp-content/uploads/2016/09/mini-hero.jpg' );">
                 <div class="overlay-hero">
-                    <div class="overlay-hero-title ">
+                    <div class="overlay-hero-title overlay-text">
                         <h3 class="text-medium">业务流程</h3>
                         <h1 class="text-huge ">品牌规划的全程策略伙伴</h1>
                     </div>

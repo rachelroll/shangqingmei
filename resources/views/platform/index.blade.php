@@ -26,7 +26,7 @@
 </style>
 @extends('layout/layout')
 @section('content')
-    <div class="full-main-container white-bg full-main-container-margin">
+    <div class="main-container">
         <div class="title">
             <div class="big">
                 互动平台
@@ -36,6 +36,8 @@
                 这是我们为客户推出的一项免费服务，如果您对目前的品牌建设有不满意之处，意欲寻找解决办法，我们愿从专业角度为您做一次初步诊断和改进建议。
             </div>
         </div>
+    </div>
+    <div class="full-main-container white-bg full-main-container-margin">
         <div class=" remove-top-padding wrap-content">
             <a class="down-cta">
                 <img class="arrow main-arrow" src="../wp-content/themes/interbrand/img/m-arr1.svg" />

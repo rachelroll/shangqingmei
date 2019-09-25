@@ -127,6 +127,12 @@ class PlatformController extends Controller
     {
         $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
+
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
+
         return view('platform.visual_clinic', compact('messages', 'projects'));
     }
 
@@ -134,6 +140,12 @@ class PlatformController extends Controller
     {
         $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
+
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
+
         return view('platform.linian', compact('messages', 'projects'));
     }
 
@@ -142,6 +154,12 @@ class PlatformController extends Controller
     {
         $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
+
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
+
         return view('platform.update_case', compact('messages', 'projects'));
     }
 
@@ -150,6 +168,12 @@ class PlatformController extends Controller
     {
         $projects = $this->projects;
         $messages = Message::orderby('id', 'DESC')->get();
+
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
+
         return view('platform.transform_case', compact('messages', 'projects'));
     }
 
@@ -174,6 +198,11 @@ class PlatformController extends Controller
             }
         }
 
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
+
         return view('platform.opinion', compact('messages', 'ci_files', 'brand_files', 'sales_files', 'projects'));
     }
 
@@ -183,15 +212,22 @@ class PlatformController extends Controller
 
         $chuanqi = Chuanqi::find($id);
 
-        $lists = Chuanqi::get()->groupBy('type');
+        $lists = Chuanqi::get()->groupBy('type_id');
 
-        for ($i = 1; $i <= count($lists); $i++) {
-            foreach ($lists as &$item) {
-                $item->id = $i;
+        foreach ($lists as $key => &$item) {
+            if ($key == 1) {
+                $item->type = 'CI 传奇';
+            } elseif($key == 2) {
+                $item->type = '欧美 CI 范例';
             }
         }
 
         $messages = Message::orderby('id', 'DESC')->get();
+
+        $messages = $messages->map(function ($item) {
+            $item->content = $this->handleGif($item->content);
+            return $item;
+        });
 
         return view('platform.chuanqi', compact('chuanqi', 'lists', 'messages', 'projects'));
     }

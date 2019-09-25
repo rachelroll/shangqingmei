@@ -71,3 +71,11 @@ span.bold, h1.bold {
     font-size: 18px;
     font-weight: bold;
 }
+
+.red {
+    background-image: url(../img/red-back.png);
+}
+
+.overlay-text {
+    margin-bottom: 60px;
+}

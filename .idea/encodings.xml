@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/.env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/app/Category.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/app/Http/Kernel.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/app/Movie.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/app/Nova/Category.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/app/Nova/Movie.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/composer.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/config/app.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/config/filesystems.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/database/migrations/2019_09_19_060846_create_movies_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/database/migrations/2019_09_19_060858_create_categories_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zhengfu-admin/nova/resources/lang/en.json" charset="UTF-8" />
+  </component>
+</project>

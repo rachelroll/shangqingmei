@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="full-main-container white-bg full-main-container-margin">
-        <div class=" remove-top-padding wrap-content">
+        <div class="remove-top-padding wrap-content">
             <a class="down-cta">
                 <img class="arrow main-arrow" src="../wp-content/themes/interbrand/img/m-arr1.svg" />
                 <img class="arrow second-arrow" src="../wp-content/themes/interbrand/img/m-arr2.svg" />
