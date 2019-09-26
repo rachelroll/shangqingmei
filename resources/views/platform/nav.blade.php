@@ -1,14 +1,10 @@
 <style>
-    .red {
-        background-image: url(../img/red-back.png);
-    }
-
     .horizontal-container {
         margin: 0 auto;
-        background-color: #f4ffe3;
+        /*background-color: #f4ffe3;*/
         width: 100%;
         position: relative;
-        border: 1px solid #e0ebcf;
+        /*border: 1px solid #e0ebcf;*/
     }
     .scroll-wrapper::-webkit-scrollbar {
         display: none;
@@ -44,6 +40,12 @@
     .dropdown li {
         line-height: 60px;
         border-bottom: solid 1px #8a8a8a;
+    }
+
+    .text-red {
+        color: black;
+        font-weight: bold;
+        background-image: url(../img/red-back.png);
     }
 </style>
 @if(Agent::isDesktop())
@@ -82,8 +84,12 @@
 <div class="horizontal-container">
     <div class="scroll-wrapper" ref="scroll">
         <div class="scroll-content">
-            <div data="a1" class="scroll-item">互动平台</div>
-            <div data="a2" class="scroll-item">诊断案例</div>
+            <div data="a1" class="scroll-item">
+                <span>互动平台</span>
+            </div>
+            <div data="a2" class="scroll-item">
+                <span>诊断案例</span>
+            </div>
         </div>
     </div>
     <ul class="dropdown" id="a1">
@@ -118,7 +124,33 @@
 </div>
 
 <br>
+<br>
+<hr style="margin-top: 20px; border-top: 4px solid #444;">
 {{--                .end 这里是滑动导航--}}
 @endif
 
 
+@section('script')
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
+    <script>
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+        }
+
+        $(function() {
+            $('.scroll-item').on('click',function(e) {
+                // e.preventDefault();
+                $('.scroll-item').children().removeClass('text-red');
+                $(this).children().addClass('text-red');
+                var id = $(this).attr('data');
+                $('.dropdown').not('#'+id).hide();
+                $('#'+id).toggle(200);
+            })
+        })
+    </script>
+@endsection

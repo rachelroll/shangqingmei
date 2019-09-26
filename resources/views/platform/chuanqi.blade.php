@@ -1,116 +1,168 @@
+{{--<style>--}}
+{{--    .image-text .text-huge {--}}
+{{--        margin-top: 80px;--}}
+{{--    }--}}
+
+{{--    .wrap-iconic-case .text-image-row div.single-image {--}}
+{{--        background-color: #ddd;--}}
+{{--        padding: 32px;--}}
+{{--        margin-right: 30px;--}}
+{{--    }--}}
+
+{{--    .wrap-iconic-case .text-image-row div.single-image h1 {--}}
+{{--        font-size: 18px;--}}
+{{--        margin-bottom: 16px;--}}
+{{--    }--}}
+
+{{--    .wrap-iconic-case .text-image-row div.single-image ul li {--}}
+{{--        margin: 10px 0;--}}
+{{--        color: #666;--}}
+{{--    }--}}
+
+{{--    .images-row {--}}
+{{--        margin: 20px 0;--}}
+{{--    }--}}
+
+{{--    ul.nav {--}}
+{{--        background-color: #333;--}}
+{{--        overflow: auto;--}}
+{{--        /*white-space: nowrap;*/--}}
+{{--    }--}}
+
+{{--    li.nav-item {--}}
+{{--        display: inline-block;--}}
+{{--        color: white;--}}
+{{--        text-align: center;--}}
+{{--        padding: 14px;--}}
+{{--        text-decoration: none;--}}
+{{--    }--}}
+
+{{--    ul li a {--}}
+{{--        color: #333;--}}
+{{--    }--}}
+
+{{--    div.scrollmenu {--}}
+{{--        background-color: #333;--}}
+{{--        overflow: auto;--}}
+{{--        white-space: nowrap;--}}
+{{--    }--}}
+
+{{--    div.scrollmenu div {--}}
+{{--        display: inline-block;--}}
+{{--        color: white;--}}
+{{--        text-align: center;--}}
+{{--        padding: 14px;--}}
+{{--        text-decoration: none;--}}
+{{--    }--}}
+
+{{--    div.scrollmenu div:hover {--}}
+{{--        background-color: #777;--}}
+{{--    }--}}
+{{--    /* clear float */--}}
+{{--    .clear:after {--}}
+{{--        display: block;--}}
+{{--        clear: both;--}}
+{{--        content: "";--}}
+{{--        visibility: hidden;--}}
+{{--        height: 0--}}
+{{--    }--}}
+
+{{--    .clear {--}}
+{{--        zoom: 1--}}
+{{--    }--}}
+{{--    /* end clear float */--}}
+{{--    .swiper-container .swiper-wrapper {--}}
+{{--        position: relative;--}}
+{{--    }--}}
+{{--    .swiper-container .swiper-wrapper .swiper-slide {--}}
+{{--        /*border: 1px solid red;*/--}}
+{{--        text-align: left;--}}
+{{--        padding: 6px 0;--}}
+{{--    }--}}
+{{--    .child {--}}
+{{--        display: none;--}}
+{{--        /*position: absolute;*/--}}
+{{--        /*z-index:999;*/--}}
+{{--        /*top: 100px;*/--}}
+{{--        width: 100%;--}}
+{{--        font-weight: normal;--}}
+{{--        /*padding: 10px;*/--}}
+{{--        font-size: 16px;--}}
+{{--        color: #666;--}}
+{{--    }--}}
+{{--    .child li {--}}
+{{--        line-height: 60px;--}}
+{{--        border-bottom: solid 1px #8a8a8a;--}}
+
+{{--    }--}}
+{{--    .parent span {--}}
+{{--        font-size: 18px;--}}
+{{--        font-weight: bold;--}}
+{{--        color: #333;--}}
+{{--    }--}}
+{{--    .red {--}}
+{{--        /*color: red;*/--}}
+{{--        /*border-bottom: 1px solid #bd0202;*/--}}
+{{--        background-image: url(../img/red-back.png);--}}
+{{--    }--}}
+
+{{--    .show {--}}
+{{--        display: block;--}}
+{{--    }--}}
+{{--    .hide {--}}
+{{--        display: none;--}}
+{{--    }--}}
+{{--</style>--}}
+
+
 <style>
-    .image-text .text-huge {
-        margin-top: 80px;
+    .horizontal-container {
+        margin: 0 auto;
+        /*background-color: #f4ffe3;*/
+        width: 100%;
+        position: relative;
+        /*border: 1px solid #e0ebcf;*/
     }
-
-    .wrap-iconic-case .text-image-row div.single-image {
-        background-color: #ddd;
-        padding: 32px;
-        margin-right: 30px;
+    .scroll-wrapper::-webkit-scrollbar {
+        display: none;
     }
-
-    .wrap-iconic-case .text-image-row div.single-image h1 {
-        font-size: 18px;
-        margin-bottom: 16px;
+    .scroll-wrapper{
+        margin: 0 auto;
+        /* overflow: hidden; */
+        border-radius: 5px;
+        overflow-x: auto;
+        -webkit-backface-visibility: hidden;
+        -webkit-overflow-scrolling: touch; /* 2 */
     }
-
-    .wrap-iconic-case .text-image-row div.single-image ul li {
-        margin: 10px 0;
-        color: #666;
-    }
-
-    .images-row {
-        margin: 20px 0;
-    }
-
-    ul.nav {
-        background-color: #333;
-        overflow: auto;
-        /*white-space: nowrap;*/
-    }
-
-    li.nav-item {
+    .scroll-content {
         display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-    }
-
-    ul li a {
-        color: #333;
-    }
-
-    div.scrollmenu {
-        background-color: #333;
-        overflow: auto;
         white-space: nowrap;
     }
-
-    div.scrollmenu div {
+    .scroll-item {
+        height: 48px;
+        font-size: 24px;
+        line-height: 48px;
         display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
+        padding: 0 10px;
     }
 
-    div.scrollmenu div:hover {
-        background-color: #777;
-    }
-    /* clear float */
-    .clear:after {
-        display: block;
-        clear: both;
-        content: "";
-        visibility: hidden;
-        height: 0
-    }
-
-    .clear {
-        zoom: 1
-    }
-    /* end clear float */
-    .swiper-container .swiper-wrapper {
-        position: relative;
-    }
-    .swiper-container .swiper-wrapper .swiper-slide {
-        /*border: 1px solid red;*/
-        text-align: left;
-        padding: 6px 0;
-    }
-    .child {
+    .dropdown {
         display: none;
-        /*position: absolute;*/
-        /*z-index:999;*/
-        /*top: 100px;*/
         width: 100%;
+        padding: 0 10px;
         font-weight: normal;
-        /*padding: 10px;*/
         font-size: 16px;
         color: #666;
     }
-    .child li {
+    .dropdown li {
         line-height: 60px;
         border-bottom: solid 1px #8a8a8a;
-
     }
-    .parent span {
-        font-size: 18px;
+
+    .text-red {
+        color: black;
         font-weight: bold;
-        color: #333;
-    }
-    .red {
-        /*color: red;*/
-        /*border-bottom: 1px solid #bd0202;*/
         background-image: url(../img/red-back.png);
-    }
-
-    .show {
-        display: block;
-    }
-    .hide {
-        display: none;
     }
 </style>
 
@@ -164,18 +216,18 @@
                 </div>
                 @else
                     {{--                这里是滑动导航--}}
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            @foreach($lists as $key=>$list)
-                                <div class="swiper-slide" style="width: 70px;">
-                                    <div class="parent" data="{{ $key }}">
+                    <div class="horizontal-container">
+                        <div class="scroll-wrapper" ref="scroll">
+                            <div class="scroll-content">
+                                @foreach($lists as $key=>$list)
+                                    <div class="scroll-item" data="{{ 'a' . $key }}">
                                         <span>{{ $list->type }}</span>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
                         @foreach($lists as $key=>$list)
-                            <ul class="child" id="{{$key}}">
+                            <ul class="dropdown" id="{{ 'a' . $key}}">
                                 @foreach($list as $item)
                                     <li>
                                         <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="color: #333">
@@ -187,7 +239,9 @@
                         @endforeach
                     </div>
 
-                    <div class="clear"></div>
+                    <br>
+                    <br>
+                    <hr style="margin-top: 20px; border-top: 4px solid #444;">
                     {{--                .end 这里是滑动导航--}}
                 @endif
                 <div class="image-text">
@@ -200,26 +254,25 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-            },
-        });
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+        }
+
         $(function() {
-            $('.parent').on('click',function(e) {
+            $('.scroll-item').on('click',function(e) {
                 // e.preventDefault();
-                $('.parent').children().removeClass('red');
-                $(this).children().addClass('red');
+                $('.scroll-item').children().removeClass('text-red');
+                $(this).children().addClass('text-red');
                 var id = $(this).attr('data');
-                $('.child').not('#'+id).hide();
-                $('#'+id).toggle(400);
-                // $(this).parent().siblings().children('.child').hide();
-                // $(this).siblings().toggle(400)
+                $('.dropdown').not('#'+id).hide();
+                $('#'+id).toggle(200);
             })
         })
     </script>

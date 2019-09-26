@@ -375,30 +375,7 @@
     </div>
 @endsection
 
-@section('script')
-    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
-    <script>
-        window.onload = function () {
-            let wrapper = document.querySelector('.scroll-wrapper')
-            let scroll = new BScroll(wrapper, {
-                scrollX: true,
-                scrollY: false,
-                click: true,
-            })
-        }
-        
-        $(function() {
-            $('.scroll-item').on('click',function(e) {
-                // e.preventDefault();
-                $('.scroll-item').removeClass('text-danger');
-                $(this).addClass('text-danger');
-                var id = $(this).attr('data');
-                $('.dropdown').not('#'+id).hide();
-                $('#'+id).toggle(200);
-            })
-        })
-    </script>
-    @endsection
+
 
 
 
