@@ -18,19 +18,29 @@
             <div class="text-image-row">
                 @include('platform/nav')
                 <div class="image-text">
-                    <h1 style="font-size: 22px">DYNIC的失利和NTT的成功</h1>
+                    <h1 style="font-size: 22px">DYNIC 的失利和 NTT 的成功</h1>
                     <hr>
                     <p>多角化经营带来的旧形象与新形象更替</p>
                     <br>
-                    <div class="img-block">
-                        <img style="margin-right: 100px" src="/img/dynic.jpg" alt=""/>
-                        <img src="/img/ntt1.jpg" alt=""/>
-                        <img src="/img/ntt2.jpg" alt=""/>
+                    <div class="row">
+                        <div class="col" style="margin-bottom: 40px">
+                            <div class="img-block" style="margin-bottom: 10px">
+                                <img style="margin-right: 100px" src="/img/dynic.jpg" alt=""/>
+                            </div>
+                            <div>
+                                <span style="margin-right: 80px">日本皮革工业公司(DYNIC)</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="img-block">
+                                <img src="/img/ntt1.jpg" alt=""/>
+                                <img src="/img/ntt2.jpg" alt=""/>
+                            </div>
+                            <div>
+                                <span>日本电信电话株式会社(NTT)</span>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        <span style="margin-right: 80px">日本皮革工业公司(DYNIC)</span>
-                        <span>日本电信电话株式会社(NTT)</span>
-                    </p>
                     <br>
                     <h1 style="font-size: 22px">一、DYNIC的CI教训</h1>
                     <br>

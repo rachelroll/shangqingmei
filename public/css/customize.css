@@ -79,3 +79,39 @@ span.bold, h1.bold {
 .overlay-text-service {
     margin-bottom: 60px;
 }
+
+html {
+    font-size: 100%!important;
+    color: #333;
+    line-height:300%;
+    font-family: "STXihei", "HelveticaNeueforIBW01-Rg", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+    /* 10÷16=62.5% */
+}
+p {
+    line-height: 160%;!important;
+}
+@media only screen and (min-width: 481px){
+    html {
+        /*font-size: 94%!important; !* 15.04÷16=94% *!*/
+        font-size: 95vw;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important; /* 17.44÷16=109% */
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important; /* 20÷16=125% */
+    }
+}
+@media only screen and (min-width: 360px){
+    html {
+        font-size: 140%!important; /* 17.44÷16=109% */
+    }
+}
+
+.card {
+    font-size: 18px;
+}

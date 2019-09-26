@@ -55,19 +55,21 @@
             width: 1em !important;
             margin: 0 .07em !important;
             vertical-align: -0.1em !important;
-            background: none !important;
+            background: none !important;￿
             padding: 0 !important;
         }
 
         body {
             font-family: "STXihei";
+            color: #333;
         }
     </style>
 
     <style> #mainNav.show .nav-toggle .hamburger .line2, #mainNav.show .nav-toggle .hamburger .line3 {
         margin-left: 3px;
         margin-top: -7px;
-    } </style> <![endif]-->
+    }
+    </style> <![endif]-->
 
     @yield('style')
 

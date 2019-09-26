@@ -34,7 +34,7 @@
         width: 100%;
         padding: 0 10px;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 20px;
         color: #666;
     }
     .dropdown li {
@@ -103,6 +103,7 @@
                 视觉形象诊断
             </a>
         </li>
+        <br>
     </ul>
     <ul class="dropdown" id="a2">
         <li>
@@ -120,12 +121,12 @@
                 形象更新案例
             </a>
         </li>
+        <br>
     </ul>
 </div>
 
+<hr style="margin-top: 20px; margin-bottom: 30px; border-top: 4px solid #444;">
 <br>
-<br>
-<hr style="margin-top: 20px; border-top: 4px solid #444;">
 {{--                .end 这里是滑动导航--}}
 @endif
 

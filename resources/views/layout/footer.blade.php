@@ -13,7 +13,7 @@
     </section>
 </div>
 <br/>
-<footer id="" class="main-footer m-footer">
+<footer id="" class="main-footer m-footer" style="font-size: 18px;">
     <div class="main-container">
         <div>
             <div>

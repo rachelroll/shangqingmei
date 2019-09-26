@@ -1,45 +1,45 @@
-{{--<style>--}}
-{{--    .image-text .text-huge {--}}
-{{--        margin-top: 80px;--}}
-{{--    }--}}
+<style>
+    .image-text .text-huge {
+        margin-top: 80px;
+    }
 
-{{--    .wrap-iconic-case .text-image-row div.single-image {--}}
-{{--        background-color: #ddd;--}}
-{{--        padding: 32px;--}}
-{{--        margin-right: 30px;--}}
-{{--    }--}}
+    .wrap-iconic-case .text-image-row div.single-image {
+        background-color: #ddd;
+        padding: 32px;
+        margin-right: 30px;
+    }
 
-{{--    .wrap-iconic-case .text-image-row div.single-image h1 {--}}
-{{--        font-size: 18px;--}}
-{{--        margin-bottom: 16px;--}}
-{{--    }--}}
+    .wrap-iconic-case .text-image-row div.single-image h1 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
 
-{{--    .wrap-iconic-case .text-image-row div.single-image ul li {--}}
-{{--        margin: 10px 0;--}}
-{{--        color: #666;--}}
-{{--    }--}}
+    .wrap-iconic-case .text-image-row div.single-image ul li {
+        margin: 10px 0;
+        color: #666;
+    }
 
-{{--    .images-row {--}}
-{{--        margin: 20px 0;--}}
-{{--    }--}}
+    .images-row {
+        margin: 20px 0;
+    }
 
-{{--    ul.nav {--}}
-{{--        background-color: #333;--}}
-{{--        overflow: auto;--}}
-{{--        /*white-space: nowrap;*/--}}
-{{--    }--}}
+    ul.nav {
+        background-color: #333;
+        overflow: auto;
+        /*white-space: nowrap;*/
+    }
 
-{{--    li.nav-item {--}}
-{{--        display: inline-block;--}}
-{{--        color: white;--}}
-{{--        text-align: center;--}}
-{{--        padding: 14px;--}}
-{{--        text-decoration: none;--}}
-{{--    }--}}
+    li.nav-item {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+    }
 
-{{--    ul li a {--}}
-{{--        color: #333;--}}
-{{--    }--}}
+    ul li a {
+        color: #333;
+    }
 
 {{--    div.scrollmenu {--}}
 {{--        background-color: #333;--}}
@@ -112,10 +112,7 @@
 {{--    .hide {--}}
 {{--        display: none;--}}
 {{--    }--}}
-{{--</style>--}}
 
-
-<style>
     .horizontal-container {
         margin: 0 auto;
         /*background-color: #f4ffe3;*/
@@ -151,7 +148,7 @@
         width: 100%;
         padding: 0 10px;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 20px;
         color: #666;
     }
     .dropdown li {
@@ -203,7 +200,7 @@
                     <div class="single-image">
                     @foreach($lists as $key => $list)
                         <div class="red-border-box">
-                            <h1>{{ $key }}</h1>
+                            <h1>{{ $list->type }}</h1>
                         </div>
                         <ul>
                             @foreach($list as $item)
@@ -230,7 +227,7 @@
                             <ul class="dropdown" id="{{ 'a' . $key}}">
                                 @foreach($list as $item)
                                     <li>
-                                        <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="color: #333">
+                                        <a href="{{ route('web.platform.chuanqi', ['id' => $item->id]) }}" style="color: #333">
                                             {{ $item->title }}
                                         </a>
                                     </li>
@@ -240,8 +237,8 @@
                     </div>
 
                     <br>
-                    <br>
                     <hr style="margin-top: 20px; border-top: 4px solid #444;">
+                    <br>
                     {{--                .end 这里是滑动导航--}}
                 @endif
                 <div class="image-text">

@@ -222,7 +222,6 @@
                 <div class="input_name"><input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
                 </div>
             </div>
-        </div>
     </form>
 </div>
 <!--顶部输入框结束-->

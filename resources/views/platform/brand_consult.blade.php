@@ -22,13 +22,13 @@
         }
 
         .wrap-iconic-case .text-image-row div.single-image h1 {
-            font-size: 18px;
+            font-size: 26px;
             margin-bottom: 16px;
         }
 
         .wrap-iconic-case .text-image-row div.single-image ul li {
             margin: 10px 0;
-            color: #666;
+            color: #212529;
         }
 
         .images-row {
@@ -81,10 +81,7 @@
 
         .clear {
             zoom: 1
-
         }
-
-
     </style>
 @stop
 

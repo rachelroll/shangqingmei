@@ -709,8 +709,9 @@ a.color-gray {
   font-size: 13px; }
 
 .text-body {
-  font-size: 17px;
-  font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  /*font-size: 17px;*/
+  /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+}
   .text-body img {
     max-width: 100%; }
   .text-body li {
@@ -3099,11 +3100,12 @@ textarea.ninja-forms-field {
   .lang-ja #mainNav .text-large {
     font-size: 24px; }
   .text-huge, .page-title {
-    font-size: 42px; }
+    font-size: 28px; }
   .text-large,
   .homepage-newsroom .text-medium {
-    font-size: 28px;
-    line-height: 100%; }
+    font-size: 24px;
+    line-height: 100%;
+  }
   .body h3,
   .text-medium {
     font-size: 24px; }
@@ -3112,7 +3114,8 @@ textarea.ninja-forms-field {
   .text-tiny {
     font-size: 14px; }
   .text-body {
-    font-size: 18px; }
+    /*font-size: 18px; */
+  }
   #regions .col-25 {
     width: 100%; }
   .overlay .text-huge, .overlay .page-title {
@@ -3880,9 +3883,9 @@ textarea.ninja-forms-field {
           font-size: 28px;
           transition: all ease 0.3s; }
         .wrap-content .row.two-columns-list .item p {
-          font-size: 17px;
-          font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-          font-weight: 300;
+          /*font-size: 17px;*/
+          /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+          /*font-weight: 300;*/
           line-height: 1.5; }
         .wrap-content .row.two-columns-list .item:hover {
           cursor: pointer; }
@@ -3928,9 +3931,9 @@ textarea.ninja-forms-field {
               position: absolute;
               left: 0px; } }
       .wrap-content .row.numbered-list .item p {
-        font-size: 17px;
-        font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-weight: 300;
+        /*font-size: 17px;*/
+        /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+        /*font-weight: 300;*/
         line-height: 1.5;
         margin-bottom: 20px; }
         .wrap-content .row.numbered-list .item p:last-child {
@@ -5663,11 +5666,12 @@ input[type="search"]::-webkit-search-cancel-button {
       margin-bottom: 20px;
       display: block; }
   .wrap-approach .section-description {
-    font-size: 21px;
-    font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
+    /*font-size: 21px;*/
+    /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    /*font-weight: 300;*/
     padding: 20px 0 20px 33%;
-    line-height: 125%; }
+    /*line-height: 125%; */
+  }
     @media (max-width: 768px) {
       .wrap-approach .section-description {
         padding: 20px 0 40px; } }
@@ -5944,10 +5948,11 @@ input[type="search"]::-webkit-search-cancel-button {
       overflow: hidden;
       width: 100%;
       transition: all ease 0.5s;
-      font-family: "HelveticaNeueforIBW01-Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-weight: 400;
+      /*font-family: "HelveticaNeueforIBW01-Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+      /*font-weight: 400;*/
       font-size: 28px;
-      line-height: 1.2; }
+      /*line-height: 1.2; */
+    }
       @media (max-width: 768px) {
         .search-result-item .overlay-text .item-title {
           font-size: 21px;
@@ -6590,9 +6595,9 @@ input[type="search"]::-webkit-search-cancel-button {
           font-size: 28px;
           transition: all ease 0.3s; }
         .wrap-content .row.two-columns-list .item p {
-          font-size: 17px;
-          font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-          font-weight: 300;
+          /*font-size: 17px;*/
+          /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+          /*font-weight: 300;*/
           line-height: 1.5; }
         .wrap-content .row.two-columns-list .item:hover {
           cursor: pointer; }
@@ -6638,9 +6643,9 @@ input[type="search"]::-webkit-search-cancel-button {
               position: absolute;
               left: 0px; } }
       .wrap-content .row.numbered-list .item p {
-        font-size: 17px;
-        font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-weight: 300;
+        /*font-size: 17px;*/
+        /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+        /*font-weight: 300;*/
         line-height: 1.5;
         margin-bottom: 20px; }
         .wrap-content .row.numbered-list .item p:last-child {
@@ -7868,7 +7873,8 @@ button:hover {
 
 .v-center {
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+}
 
 .is-distributed {
   display: -ms-flexbox;
@@ -8373,11 +8379,12 @@ input[type="search"]::-webkit-search-cancel-button {
       margin-bottom: 20px;
       display: block; }
   .wrap-approach .section-description {
-    font-size: 21px;
-    font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
+    /*font-size: 21px;*/
+    /*font-family: "HelveticaNeueforIBW01-Rg", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    /*font-weight: 300;*/
     padding: 20px 0 20px 33%;
-    line-height: 125%; }
+    /*line-height: 125%; */
+  }
     @media (max-width: 768px) {
       .wrap-approach .section-description {
         padding: 20px 0 40px; } }
@@ -8654,10 +8661,11 @@ input[type="search"]::-webkit-search-cancel-button {
       overflow: hidden;
       width: 100%;
       transition: all ease 0.5s;
-      font-family: "HelveticaNeueforIBW01-Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-weight: 400;
+      /*font-family: "HelveticaNeueforIBW01-Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+      /*font-weight: 400;*/
       font-size: 28px;
-      line-height: 1.2; }
+      line-height: 1.2;
+    }
       @media (max-width: 768px) {
         .search-result-item .overlay-text .item-title {
           font-size: 21px;

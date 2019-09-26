@@ -94,6 +94,59 @@
         .hide {
             display: none;
         }
+
+        .horizontal-container {
+            margin: 0 auto;
+            /*background-color: #f4ffe3;*/
+            width: 100%;
+            position: relative;
+            /*border: 1px solid #e0ebcf;*/
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-wrapper{
+            margin: 0 auto;
+            /* overflow: hidden; */
+            border-radius: 5px;
+            overflow-x: auto;
+            -webkit-backface-visibility: hidden;
+            -webkit-overflow-scrolling: touch; /* 2 */
+        }
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .scroll-item {
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .dropdown {
+            display: none;
+            width: 100%;
+            padding: 0 10px;
+            font-weight: normal;
+            font-size: 20px;
+            color: #666;
+        }
+        .dropdown li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+        }
+
+        .text-red {
+            color: black;
+            font-weight: bold;
+            background-image: url(../img/red-back.png);
+        }
+
+        .h5, h5 {
+            font-size: 1.1rem;
+        }
     </style>
     @endsection
 
@@ -207,32 +260,33 @@
             <br>
 
             <div class="text-image-row">
-
-{{--                这里是滑动导航--}}
-                <div class="swiper-container">
-                    <div class="swiper-wrapper ">
-                        @foreach($lists as $key=>$list)
-                        <div class="swiper-slide" style="width: 70px;">
-                            <span class="parent" data="{{ $key }}">
-                                {{ $list->title }}
-                            </span>
+                {{--                这里是滑动导航--}}
+                <div class="horizontal-container">
+                    <div class="scroll-wrapper" ref="scroll">
+                        <div class="scroll-content">
+                            @foreach($lists as $key=>$list)
+                                <div class="scroll-item" data="{{ 'a' . $key }}">
+                                    <span>{{ $list->title }}</span>
+                                </div>
+                            @endforeach
                         </div>
-                        @endforeach
                     </div>
                     @foreach($lists as $key=>$list)
-                    <ul class="child" id="{{$key}}">
-                        @foreach($list->projects as $item)
-                            <li >
-                                <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="color: #333">
-                                    {{ $item->title }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+                        <ul class="dropdown" id="{{ 'a' . $key}}">
+                            @foreach($list->projects as $item)
+                                <li>
+                                    <a href="{{ route('web.platform.chuanqi', ['id' => $item->id]) }}" style="color: #333">
+                                        {{ $item->title }}
+                                    </a>
+                                </li>
+                            @endforeach
+                                <br>
+                        </ul>
                     @endforeach
                 </div>
 
-                <div class="clear"></div>
+                <br>
+                <hr style="margin-top: 20px; border-top: 4px solid #444;">
                 {{--                .end 这里是滑动导航--}}
 
                 <br>
@@ -261,30 +315,29 @@
         </div>
     </div>
 @endsection
+
+
 @section('script')
-    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 5,
-            spaceBetween: 6,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-            },
-        });
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+        }
 
         $(function() {
-            $('.parent').on('click',function(e) {
+            $('.scroll-item').on('click',function(e) {
                 // e.preventDefault();
-                $('.parent').removeClass('red');
+                $('.scroll-item').children().removeClass('text-red');
+                $(this).children().addClass('text-red');
                 var id = $(this).attr('data');
-                $('.child').not('#'+id).hide();
-                $('#'+id).toggle(400);
-                $(this).toggleClass("red");
-                // $(this).parent().siblings().children('.child').hide();
+                $('.dropdown').not('#'+id).hide();
+                $('#'+id).toggle(200);
             })
         })
     </script>
-    @endsection
-
-
+@endsection

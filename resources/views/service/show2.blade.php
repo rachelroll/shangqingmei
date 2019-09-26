@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="text-image-row v-center ">
+            <div class="text-image-row">
                 <div class="single-image"></div>
                 <div class="image-text">
                     <h4 class="text-huge double-margin-bottom">
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="text-image-row v-center ">
+            <div class="text-image-row">
                 <div class="single-image"></div>
                 <div class="image-text">
                     <h4 class="text-huge double-margin-bottom">

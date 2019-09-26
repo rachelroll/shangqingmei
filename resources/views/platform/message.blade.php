@@ -17,7 +17,7 @@
     <div class="card-body">
         <form action="{{ route('web.message.store') }}" method="POST" name="message">
             @csrf
-            <textarea name="content" cols="" rows=""  class="input scrollbar" id="content" onpropertychange="textCounter(this, 500)" onfocus="if (value =='写下你想说的，开始我们的对话'){value =''}" onblur="if (value ==''){value='写下你想说的，开始我们的对话'}">写下你想说的，开始我们的对话</textarea>
+            <textarea style="font-size: 18px" name="content" cols="" rows=""  class="input scrollbar" id="content" onpropertychange="textCounter(this, 500)" onfocus="if (value =='写下你想说的，开始我们的对话'){value =''}" onblur="if (value ==''){value='写下你想说的，开始我们的对话'}">写下你想说的，开始我们的对话</textarea>
             <br>
 
             @if(Agent::isDesktop())
@@ -132,19 +132,21 @@
                 </div>
                 <div style="clear:both"></div>
                 <br>
-                    <div class="row justify-content-between" style="margin-left: 0">
-                        <div class="bq">
-                            <a href="javascript:;" id="show_bq" title="加入表情">
-                                <img src="../img/bq.png" alt="" style="width: 34px; height: 34px"/>
-                            </a>
-                        </div>
-                        <div class="input_name col" style="background-image: none">
-                            <input name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
-                        </div>
-                        <div class="input_submit col align-self-end" style="margin-bottom: 4px;">
-                            <input  type="submit" class="botton" onClick="return checkdata();" value="发 布" />
+
+                <div class="row" style="margin-left: 0">
+                    <div class="col bq" style="margin: auto 0">
+                        <div id="show_bq">
+                            <img src="../img/bq.png" alt="" style="width: 34px; height: 34px"/>
                         </div>
                     </div>
+                    <div class="col input_name" style="background-image: none">
+                        <input style="font-size: 18px" name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
+                    </div>
+                    <div class="col input_submit align-self-end" style="margin-bottom: 4px;">
+                        <input style="font-size: 18px" type="submit" class="botton" onClick="return checkdata();" value="发 布" />
+                    </div>
+                </div>
+
 {{--                </div>--}}
              @endif
         </form>
@@ -154,8 +156,8 @@
 @foreach($messages as $message)
     <div class="card">
         <div class="card-header" style="position: relative; height: 48px">
-            <img style="width: 28px; position: absolute; bottom: 20%" src="{{ $message->avatar }}" alt=""/>
-            <span style="position: absolute; left: 60px; bottom: 20%">{{ $message->username }}</span>
+            <img style="width: 28px; position: absolute; bottom: 20%;"  src="{{ $message->avatar }}" alt=""/>
+            <span style="position: absolute; left: 70px; bottom: 20%">{{ $message->username }}</span>
         </div>
         <div class="card-body">
             <p class="card-text">{!! $message->content !!}</p>
