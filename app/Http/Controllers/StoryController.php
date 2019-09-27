@@ -30,6 +30,10 @@ class StoryController extends Controller
     {
         $projects = $this->projects;
         $story = Story::find($id);
+
+        $story->background = str_replace('<p>&nbsp; &nbsp; &nbsp; &nbsp; ', '<p>', $story->background);
+        $story->background = str_replace('<p>　　', '<p>', $story->background);
+
         $lists = Story::all()->groupBy('category');
         $nav = [];
         foreach ($lists as $cat => $categories) {
