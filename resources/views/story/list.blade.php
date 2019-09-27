@@ -14,13 +14,12 @@
         color: white;
     }
 
-    .block {
+    div.row div.block {
         height: 296px;
         padding: 0;
         text-align: center;
         background-color: #ddd;
         color: #333;
-        font-family: "Microsoft Sans Serif";
     }
 
     .block p.big-font{
@@ -83,7 +82,7 @@
                             <div class="mask" style="display: none"></div>
                         </div>
                     @else
-                        <div class="col-12 block" style="padding: 0" id="{{ $list->id }}">
+                        <div class="col-12 block" style="padding: 0; text-align: center;" id="{{ $list->id }}">
                             <a href="{{ route('web.story.show', ['id' => $list->id]) }}">
                                 <div style="padding: 0 20px">
                                     <p class="big-font">{{ $list->client_name }}</p>

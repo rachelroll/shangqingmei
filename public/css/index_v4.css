@@ -153,7 +153,7 @@ img {
     background-repeat: no-repeat;
     background-position: 13px 11px;
     padding-top: 10px;
-    padding-bottom: 11px;
+    padding-bottom: 10px;
     background-color: #eeeeee;
     border-radius: 20px;
 }
@@ -161,8 +161,8 @@ img {
 .name {
     height: 18px;
     width: 120px;
-    font-family: "微软雅黑";
-    font-size: 13px;
+    /*font-family: "微软雅黑";*/
+    font-size: 18px;
     line-height: 18px;
     color: #999999;
     border: 1px solid #eeeeee;

@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col input_name" style="background-image: none">
-                        <input style="font-size: 18px" name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
+                        <input style="font-size: 18px; height: 100%" name="username" type="text" class="name" id="username" value="你的名字" onPropertyChange="textCounter(this, 6)" onfocus="if (value =='你的名字'){value =''}" onblur="if (value ==''){value='你的名字'}" />
                     </div>
                     <div class="col input_submit align-self-end" style="margin-bottom: 4px;">
                         <input style="font-size: 18px" type="submit" class="botton" onClick="return checkdata();" value="发 布" />
