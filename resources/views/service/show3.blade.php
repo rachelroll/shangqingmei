@@ -236,7 +236,8 @@
                     </div>
                 </div>
             </div>
-
+            <br>
+            <br>
             <div class="related-content-row">
                 <h3 class="col-100 no-padding text-large base-margin-top base-margin-bottom">相关内容</h3>
                 <a href="{{ route('web.service.show', ['id' => 2]) }}" class="search-result-item">
