@@ -80,9 +80,10 @@ class ProjectController extends AdminController
         $form->text('type', __('类型'));
         $form->text('content', __('内容'));
         $form->text('date', __('日期'));
-        $form->image('logo', __('Logo'));
-        $form->image('cover', __('封面大图'));
-        $form->multipleImage('images', '配图');
+        $form->image('logo', __('Logo'))->removable();
+        $form->image('cover', __('封面大图'))->downloadable();
+        $form->multipleImage('images')->removable();
+
         $form->select('project_category_id', '类目名称')->options(ProjectCategory::pluck('title','id'));
         $form->select('project_id', '服务案例大类')->options([
             1 => 'CIS 案例导入',

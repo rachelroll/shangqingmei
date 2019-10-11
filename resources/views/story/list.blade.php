@@ -67,7 +67,7 @@
                     @if(request()->fullUrl() == route('web.story.list', ['type' => 1]))
                         <h2>行业经验</h2>
                     @else
-                        <h2>CI 故事</h2>
+                        <h2>CI / VI 设计</h2>
                     @endif
                 </div>
 
@@ -101,7 +101,7 @@
     </div>
 @endsection
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../wp-content/themes/interbrand/vendor/jquery/dist/jquery.js"></script>
 <script>
     $(document).ready(function(){
         $(".block").hover(function(){

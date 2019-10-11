@@ -224,7 +224,7 @@
     </div>
 @endsection
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../wp-content/themes/interbrand/vendor/jquery/dist/jquery.js"></script>
 <script>
     $(document).ready(function(){
         $(".col-25").hover(function(){

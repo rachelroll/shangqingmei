@@ -8,7 +8,7 @@ use ScoutElastic\Searchable;
 class Project extends Model
 {
 
-    use Searchable;
+    //use Searchable;
 
     protected $indexConfigurator = ProjectIndexConfigurator::class;
     protected $searchRules = [
