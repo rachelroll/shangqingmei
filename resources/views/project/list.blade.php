@@ -123,12 +123,12 @@
                 <div class="single-image">
                     @foreach($lists as $list)
                         <div class="red-border-box">
-                            <h1>{{ $list->title }}</h1>
+                            <h1 style="font-size: 21px; font-weight: bold">{{ $list->title }}</h1>
                         </div>
                         <ul>
                             @foreach($list->projects as $item)
                                 <li>
-                                    <a href="{{ route('web.project.show', ['id' => $item->id]) }}">
+                                    <a href="{{ route('web.project.show', ['id' => $item->id]) }}" style="font-size: 20px">
                                         - {{ $item->title }}
                                     </a>
                                 </li>
