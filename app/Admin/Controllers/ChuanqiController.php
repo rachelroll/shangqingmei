@@ -74,7 +74,7 @@ class ChuanqiController extends AdminController
         ]);
         $form->text('title', __('标题'));
         $form->simditor('content', '内容')->rules('required',['required'=>'必填项']);
-        $form->multipleImage('photos', __('图片上传'));
+        $form->multipleImage('photos', __('图片上传'))->removable();
 
         return $form;
     }
