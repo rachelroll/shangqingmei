@@ -27,7 +27,7 @@ class ChuanqiController extends AdminController
         $grid = new Grid(new Chuanqi);
 
         $grid->column('id', __('Id'));
-        $grid->column('type', __('分类'));
+        //$grid->column('type', __('分类'));
         $grid->column('title', __('标题'));
         $grid->column('created_at', __('创建日期'));
         $grid->column('updated_at', __('更新日期'));
@@ -46,7 +46,7 @@ class ChuanqiController extends AdminController
         $show = new Show(Chuanqi::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('type', __('分类'));
+        //$show->field('type', __('分类'));
         $show->field('title', __('标题'));
         $show->field('content', __('内容'));
         $show->field('photos', __('图片'));
