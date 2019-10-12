@@ -219,6 +219,12 @@ class PlatformController extends Controller
                 $item->type = 'CI 传奇';
             } elseif($key == 2) {
                 $item->type = '欧美 CI 范例';
+            } elseif ($key == 3) {
+                $item->type = '日本 CI 范例';
+            } elseif ($key == 4) {
+                $item->type = '港台 CI 范例';
+            } elseif ($key == 5) {
+                $item->type = '大陆 CI 范例';
             }
         }
 

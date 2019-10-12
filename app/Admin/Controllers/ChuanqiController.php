@@ -65,12 +65,12 @@ class ChuanqiController extends AdminController
     {
         $form = new Form(new Chuanqi);
 
-        $form->select('type', __('分类'))->options([
-            'CI 传奇' => 'CI 传奇',
-            '欧美 CI 范例' => '欧美 CI 范例',
-            '日本 CI 范例' => '日本 CI 范例',
-            '港台 CI 范例' => '港台 CI 范例',
-            '大陆 CI 范例' => '大陆 CI 范例',
+        $form->select('type_id', __('分类'))->options([
+            '1' => 'CI 传奇',
+            '2' => '欧美 CI 范例',
+            '3' => '日本 CI 范例',
+            '4' => '港台 CI 范例',
+            '5' => '大陆 CI 范例',
         ]);
         $form->text('title', __('标题'));
         $form->simditor('content', '内容')->rules('required',['required'=>'必填项']);

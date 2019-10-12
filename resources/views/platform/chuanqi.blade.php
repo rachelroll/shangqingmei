@@ -200,7 +200,7 @@
                     <div class="single-image">
                     @foreach($lists as $key => $list)
                         <div class="red-border-box">
-                            <h1>{{ $list->type }}</h1>
+                            <h1 style="font-weight: bold">{{ $list->type }}</h1>
                         </div>
                         <ul>
                             @foreach($list as $item)
