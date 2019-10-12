@@ -118,7 +118,7 @@
                     </div>
                     <div class="row is-flex base-margin-bottom">
                         <div class="col-25">
-                            <img src="../wp-content/uploads/2019/04/CHARLES-TREVAIL2.png" class="responsive" />
+                            <img src="../img/people/wp.png" class="responsive" />
                             <div class="mask" style="display: none">
                                 2003 年毕业于东京学艺大学，获硕士学位。2004 年就职于中国人民大学艺术学院艺术设计系，主要教授课程：设计概论、V1 设计、广告设计等。
                             </div>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="col-25">
-                            <img src="../wp-content/uploads/2019/04/laura-krajecki.png" class="responsive" />
+                            <img src="../img/people/ct.png" class="responsive" />
                             <div class="mask" style="display: none">
                                 出版《陈浩陈炯素描作品》、《房地产全程策划》、《陈炯风景素描作品集》。外经贸部国际电子商务中心（四星酒店）室内设计河南濮阳五建集团景观设计宜宾新城 66 平方公里全案策划主持设计“録宝石景观公司”建筑浙江路桥 2.2 平方公里旧城改造全案策划浙江台州 27 平方公里南山旅游全案策山东潘博“总部基地
                             </div>
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div class="col-25">
-                            <img src="../wp-content/uploads/2019/04/Gonzalo-Bruj%C3%B3.png" class="responsive" />
+                            <img src="../img/people/txg.png" class="responsive" />
                             <div class="mask" style="display: none">
                                 中苏远东地区艺术交流展东京设计艺术展艺术设计展中国人民大学“吴玉章学术讲座”奖杯设中韩教育作品展中国文物局中国文物信息中心“福禄寿喜”贺年卡
                             </div>
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                         <div class="col-25">
-                            <img class="image" src="../wp-content/uploads/2019/04/MARK-OBRIEN.png" class="responsive" />
+                            <img class="image" src="../img/people/czq.png" class="responsive" style="width: 297px; height: 297px"/>
                             <div class="mask" style="display: none">
                                 德国著名设计大师汉斯-希尔曼い国际著名视觉设计大师霍尔格-马蒂斯英国皇家艺术学院罗伯特及其导阿法国第 14 届肖蒙国际海报展 204 全国公益海报大赛北京 2008 主题招贴大赛苏州印象设计大赛
                             </div>
