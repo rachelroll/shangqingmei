@@ -43,7 +43,7 @@
                     <img src="../img/story_home_1st.jpg"
                          class="responsive">
                     <div class="overlay-text text-medium leading-small">
-                        <h2 class="item-title">VI/CI 设计</h2>
+                        <h2 class="item-title">VI / CI 设计</h2>
                         <div class="item-subtitle">
                         </div>
                     </div>

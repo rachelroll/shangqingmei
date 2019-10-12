@@ -55,9 +55,9 @@
                     @foreach($nav as $key => $list)
                         <div class="red-border-box">
                             @if( $key == 1 )
-                            <h1>VI / CI 设计</h1>
-                            @else
                             <h1>行业经验</h1>
+                            @else
+                            <h1>VI / CI 设计</h1>
                             @endif
                         </div>
                         <ul>
