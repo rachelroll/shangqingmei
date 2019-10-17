@@ -116,22 +116,29 @@
                     @endforeach
                 </div>
                 <div class="image-text">
-                    <div class="text-body">
-                        <p style="margin-bottom: 20px; font-weight: bold">
-                            {{ $project->title }}
-                        </p>
-                        <p>
-                            客户: {{ $project->client }}
-                        </p>
-                        <p>
-                            类型: {{ $project->type }}
-                        </p>
-                        <p>
-                            内容: {{ $project->content }}
-                        </p>
-                        <p>
-                            时间: {{ $project->date }}
-                        </p>
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="text-body">
+                                <p style="margin-bottom: 20px; font-weight: bold">
+                                    {{ $project->title }}
+                                </p>
+                                <p>
+                                    客户: {{ $project->client }}
+                                </p>
+                                <p>
+                                    类型: {{ $project->type }}
+                                </p>
+                                <p>
+                                    内容: {{ $project->content }}
+                                </p>
+                                <p>
+                                    时间: {{ $project->date }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-3" align="right">
+                            <img src="{{ 'http:' .env('CDN_DOMAIN').'/'. $project->logo }}" alt=""/>
+                        </div>
                     </div>
                     <br>
                     <div class="row">
