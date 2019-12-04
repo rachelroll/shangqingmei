@@ -10,3 +10,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+public/wp-content/uploads/2019/.DS_Store
+public/wp-content/uploads/2016/.DS_Store
+.DS_Store
+public/img/.DS_Store
+public/.DS_Store
+public/wp-content/.DS_Store
+*/.DS_Store

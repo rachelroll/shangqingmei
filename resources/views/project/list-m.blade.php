@@ -148,7 +148,7 @@
             font-size: 1.1rem;
         }
     </style>
-    @endsection
+@endsection
 
 @section('content')
     <div class="main-container white-bg main-container-margin">

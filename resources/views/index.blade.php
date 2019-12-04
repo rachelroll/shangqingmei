@@ -12,7 +12,7 @@
         </a>
 
         <div class="row front-page-section image-text-section" >
-            <div class="section-content image-bg center-content" style="background-image: url('../img/home_1st_jpg.jpg'); color: #ffffff; text-align: center  ">
+            <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/home_1st_jpg.jpg' }}); color: #ffffff; text-align: center  ">
                 <div class="content-textbox " style="color: #ffffff; text-align: center">
                     <h1>CIS 案例导入</h1>
                     <br/>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="row front-page-section image-text-section" >
-            <div class="section-content image-bg center-content" style="background-image: url('../img/home_2nd_jpg.jpg'); color: #ffffff; text-align: center  ">
+            <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/home_2nd_jpg.jpg' }}); color: #ffffff; text-align: center  ">
                 <div class="content-textbox " style="color: #ffffff; text-align: center">
                     <h1>品牌案例设计</h1>
                     <br/>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="row front-page-section image-text-section" >
-            <div class="section-content image-bg center-content" style="background-image: url('../img/home_3rd_jpg.jpg'); color: #ffffff; text-align: center  ">
+            <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/home_3rd_jpg.jpg' }} }}); color: #ffffff; text-align: center  ">
                 <div class="content-textbox " style="color: #ffffff; text-align: center">
                     <h1>环境规划</h1>
                     <br/>
@@ -73,7 +73,7 @@
                 preload="auto"
                 data-setup='{ "autoplay": true, "preload": "auto", "loop":true }'
             >
-                <source src="https://zhongfu-company.oss-cn-hangzhou.aliyuncs.com/shangqingmei/video1.mp4" type="video/mp4">
+                <source src="{{ 'https://' .env('CDN_DOMAIN'). '/video/video1.mp4' }}" type="video/mp4">
             </video>
         </div>
 
@@ -90,7 +90,7 @@
                 data-setup='{ "autoplay": true, "preload": "auto", "loop":true }'
                 {{--            poster="https://zhongfu-company.oss-cn-hangzhou.aliyuncs.com/yxj/WechatIMG8.png"--}}
             >
-                <source src="https://zhongfu-company.oss-cn-hangzhou.aliyuncs.com/shangqingmei/video2.mp4" type="video/mp4">
+                <source src="{{ 'https://' .env('CDN_DOMAIN'). '/video/video2.mp4' }}" type="video/mp4">
             </video>
         </div>
     </div>

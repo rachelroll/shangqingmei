@@ -47,7 +47,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.story.list', ['id' => 2]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/story_home_1st.jpg'); color: #ffffff; text-align: center; width: 100%;">
+                    <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/story_home_1st.jpg' }}); color: #ffffff; text-align: center; width: 100%;">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: A</p>
                             <br/>
@@ -61,7 +61,7 @@
 
             <div class="row front-page-section image-text-section" >
                 <a href="{{ route('web.story.list', ['id' => 1]) }}">
-                    <div class="section-content image-bg center-content" style="background-image: url('../img/story_home_2nd.jpg'); color: #ffffff; text-align: center; width: 100%;">
+                    <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/story_home_2nd.jpg' }}); color: #ffffff; text-align: center; width: 100%;">
                         <div class="content-textbox " style="color: #ffffff; text-align: center">
                             <p>CASE: B</p>
                             <br/>
