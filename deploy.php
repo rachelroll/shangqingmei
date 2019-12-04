@@ -38,6 +38,7 @@ host('www.yixiangjian.com')
     ->set('writable_use_sudo', true)
     ->identityFile('~/.ssh/deployerkey')
     ->set('deploy_path', '/var/www/{{application}}')
+    ->identityFile('~/.ssh/deployerkey')
     ->stage('staging');
 
 // Tasks
