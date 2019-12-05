@@ -34,7 +34,9 @@ class ProjectController extends Controller
         $projects = $this->projects;
 
         $project = Project::find($id);
-        $cat_id = $project->project_category_id;
+
+        $cat_id = $project->project_id;
+
         $lists = ProjectCategory::where('project_id', $cat_id)->with('projects')->get();
 
         if (Agent::isDesktop()) {

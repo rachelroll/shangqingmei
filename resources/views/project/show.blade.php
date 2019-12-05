@@ -105,7 +105,7 @@
                 <div class="single-image">
                     @foreach($lists as $list)
                         <div class="red-border-box">
-                            <h1 style="font-weight: bold">{{ $list->title }}</h1>
+                            <h1 style="font-size: 21px; font-weight: bold">{{ $list->title }}</h1>
                         </div>
 
                         <ul>
