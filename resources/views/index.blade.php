@@ -48,7 +48,7 @@
         </div>
 
         <div class="row front-page-section image-text-section" >
-            <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/home_3rd_jpg.jpg' }} }}); color: #ffffff; text-align: center  ">
+            <div class="section-content image-bg center-content" style="background-image: url({{ 'https://'. env('CDN_DOMAIN') . '/img/home_3rd_jpg.jpg' }}); color: #ffffff; text-align: center  ">
                 <div class="content-textbox " style="color: #ffffff; text-align: center">
                     <h1>环境规划</h1>
                     <br/>

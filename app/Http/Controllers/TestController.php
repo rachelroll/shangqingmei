@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
+use App\Story;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class TestController extends Controller
 {
@@ -124,4 +128,84 @@ class TestController extends Controller
     {
         //
     }
+
+    public function getFiles(Request $request)
+    {
+
+        //$bool = Storage::disk('local')->delete('public/01-1.jpg');
+        //
+        //dd($bool);
+
+
+        $path = public_path('/storage');
+
+        $files = File::files($path);
+
+        //dd($files);
+
+        $name_arr = [];
+        collect($files)->each(function ($item,$key) use (&$name_arr) {
+            $name_arr[] = $item->getRelativePathname();
+        });
+
+
+        $projects = Project::all();
+
+        $projects_files = [];
+        $projects->each(static function ($item) use (&$projects_files) {
+            if (is_array($item->images)) {
+                foreach ($item->images as $img) {
+                    $projects_files[] = $img;
+                }
+            }
+        });
+
+        $projects->each(static function ($item) use (&$projects_files) {
+             $projects_files[] = $item->logo;
+        });
+
+        $stories = Story::all();
+        $stories_files = [];
+        $stories->each(static function ($item) use (&$stories_files) {
+            if (is_array($item->images)) {
+                foreach ($item->images as $img) {
+                    $stories_files[] = $img;
+                }
+            }
+        });
+
+        $stories->each(static function ($item) use (&$stories_files) {
+            $stories_files[] = $item->logo;
+        });
+
+        //dd($stories_files);
+        //
+        //dd($projects_files);
+
+        $database_files = array_merge($stories_files, $projects_files);
+
+        //dd($database_files);
+        $compares = [];
+
+        foreach ($database_files as $item) {
+            $compares[] = str_after($item, 'images/');
+        }
+
+
+        $diff = collect($name_arr)->diff($compares)->toArray();
+
+        foreach ($diff as &$item) {
+            $item = 'public/' . $item;
+        }
+
+        //dd($diff);
+
+        $bool = Storage::disk('local')->delete($diff);
+
+        dd($bool);
+
+
+    }
 }
+
+
